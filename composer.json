@@ -1,0 +1,29 @@
+{
+    "name": "aeski/adminski",
+    "description": "Adminski theme, for Drupal 8 backend system for better Drupal UI and UX.",
+    "type": "drupal-theme",
+    "homepage": "https://aeski.net/adminski",
+    "authors": [
+        {
+            "name": "Kit Whyte",
+            "homepage": "https://www.aeski.net",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://aeski.net",
+    },
+    "license": "CC0 1.0 Universal",
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/mail_login": "^1.1",
+        "drupal/betterlogin": "^1.5"
+    },
+    "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  }
+}

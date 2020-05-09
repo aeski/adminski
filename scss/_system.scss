@@ -1,0 +1,203 @@
+$system-icons: 'd8Template';
+$system-font: 'Helvetica Neue', helvetica, Arial, sans-serif;
+$transition-speed: .3s;
+$font-path: "/themes/custom/d8template/fonts";
+
+@font-face {
+  font-family: $system-icons;
+  src: url('#{$font-path}/d8template/d8template.eot');
+  src: url('#{$font-path}/d8template/d8template.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}/d8template/d8template.woff2') format('woff2'),
+       url('#{$font-path}/d8template/d8template.woff') format('woff'),
+       url('#{$font-path}/d8template/d8template.ttf') format('truetype'),
+       url('#{$font-path}/d8template/d8template.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//------------------------------------------------------------------------
+//		Status Message
+//------------------------------------------------------------------------
+div.messages{
+	
+	border: none;
+	box-shadow: none;
+	padding: 10px 20px 10px 40px;
+	padding-left: 40px;
+	border-left: 2px solid;
+	border-radius: 0;
+	margin: 10px 0;
+	position: relative;
+	font-family: $system-font;
+
+	
+	a{
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	ul.messages__list{		
+		li{
+			list-style: disc;
+		}
+	}
+	
+	&.messages--warning::before,
+	&.messages--error::before,
+	&.messages--status::before{
+		width: 30px;
+		height: 30px;
+		font-family: $system-icons;
+		color: inherit;
+		font-size: 2rem;
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		margin-top: -12px;
+			content: "\A011";
+	}
+	
+	&.messages--warning{
+		background: #F9F6DF;
+		color: #9A6333;
+		border-color: #9A6333;
+		
+		&::before{
+			content: "\A015";
+		}	
+	}
+	
+	&.messages--error{
+		background: linear-gradient(to right, #FFD0D0 0%, #FFB9B7 100%);
+		border-color: #a51b00;
+		text-color: #a51b00;
+		
+		&::before{
+			content: "\A011";
+		}	
+	}
+	
+	&.messages--status{
+		background: #bbd7bb;
+		position: relative;
+		border-color: #77b259;
+		//background: linear-gradient(to right, #9ED29E 0%, #92D177 100%);
+		background: linear-gradient(to right, #CFE9CF 0%, #C9E8BB 100%);
+		
+		&::before{
+			content: "\A014";
+		}	
+	}
+}
+
+
+//------------------------------------------------------------------------
+//		Add / Edit Tabs
+//------------------------------------------------------------------------
+nav.tabs{
+	font-family: $system-font;
+	
+	ul.tabs{
+		margin: 15px 0 15px;
+		
+		li{
+			margin: 0;
+			a{
+				border: 1px solid #666;
+				transition: all $transition-speed;
+				border-radius: 4px;
+				font-size: 1.1rem;
+				color: #3d3d3d;
+				text-transform: uppercase;
+				font-weight: bold;
+				
+				&:hover{
+					text-decoration: none;
+					background: #3d3d3d;
+					color: #fff;
+				}
+				
+				&.is-active{
+					//background: $blue;
+					border-color: #fff;
+					
+					&:hover{
+						color: #3d3d3d;
+						border-color: #fff;
+						background: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*
+a.edit-link{
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	border: 1px solid #3d3d3d;
+	border-radius: 4px;
+	color: #3d3d3d;
+	font-weight: bold;
+	padding: 2px 4px;
+	margin-left: 5px;
+	transition: all $transition-speed;
+	float: right;
+	display: inline-block;
+	
+	&:hover{
+		background: #3d3d3d;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+*/
+
+
+//------------------------------------------------------------------------
+//		Maintenance Page
+//------------------------------------------------------------------------
+body.maintenance-page{
+//	background: url('#{$images}/Cave-Animal-Holding-Image.svg') center center no-repeat;
+//	background-size: cover;
+}
+
+
+// Unpublished content
+.node--unpublished{
+//	background-color: rgba(#fff4f4,.2);
+}
+
+
+//------------------------------------------------------------------------
+//		Admin Menu
+//------------------------------------------------------------------------
+// Resolve conflict between Mmenu and admin toolbar 
+body.mm-wrapper.adminimal-admin-toolbar{
+	padding: 0 !important;
+	
+	.toolbar-vertical{}
+				
+		
+	&.toolbar-horizontal{
+		.mm-page{
+			padding-top: 39px;
+		}
+		
+		&.toolbar-tray-open .mm-page{
+			padding-top: 79px;		
+		}	
+	}
+	
+	&.toolbar-vertical{
+		.mm-page{
+			padding-top: 39px;
+		}
+		
+		&.toolbar-tray-open .mm-page{
+			padding-top: 39px;		
+		}	
+	}	
+}
