@@ -11,7 +11,7 @@
         }
     ],
     "support": {
-        "issues": "https://aeski.net"
+        "issues": "https://aeski.net",
     },
     "license": "CC0 1.0 Universal",
     "minimum-stability": "dev",

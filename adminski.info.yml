@@ -1,10 +1,12 @@
 name: Adminski
 type: theme
 description: 'Custom Drupal 8 backend system for better Drupal UI and UX.'
-package: core
 base theme: classy
 screenshot: images/screenshot.png
 logo: 'images/logo.svg'
+hidden: true
+version: '8.x-1.0'
+core: '8.x'
 
 #Load theme css into wysiwyg
 #ckeditor_stylesheets:
@@ -14,21 +16,3 @@ logo: 'images/logo.svg'
 #Libraries
 libraries:
   - adminski/global-styling
-
-# Regions
-regions:
-  header: 'Header'
-  main_menu: 'Main Menu'
-  help: 'Help'
-  messages: 'Messages'
-  content: 'Content'
-  content_bottom: 'Content Bottom'
-  sidebar_first: 'Left Sidebar'
-  sidebar_second: 'Right Sidebar'  
-  footer: 'Footer'
-
-# Information added by Drupal.org packaging script on 2016-04-06
-version: '8.8.4'
-core: '8.x'
-project: 'drupal'
-datestamp: 1459901058

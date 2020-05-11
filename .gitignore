@@ -1,2 +1,3 @@
-# OS X indexing files
+# OSX Spotlight Files
 .DS_Store
+node_modules/
