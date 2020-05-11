@@ -6,6 +6,7 @@ screenshot: images/screenshot.png
 logo: 'images/logo.svg'
 hidden: true
 version: '8.x-1.0'
+project: 'adminski'
 core: '8.x'
 
 #Load theme css into wysiwyg
