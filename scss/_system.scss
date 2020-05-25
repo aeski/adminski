@@ -10,6 +10,11 @@
   font-style: normal;
 }
 
+%font-smoothing{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 //------------------------------------------------------------------------
 //		Status Message
 //------------------------------------------------------------------------
@@ -24,6 +29,9 @@ div.messages{
 	margin: 10px 0;
 	position: relative;
 	font-family: $system-font;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	
 	a{
@@ -44,7 +52,7 @@ div.messages{
 		height: 30px;
 		font-family: $system-icons;
 		color: inherit;
-		font-size: 2rem;
+		font-size: 22px;
 		position: absolute;
 		left: 10px;
 		top: 50%;
@@ -93,35 +101,51 @@ nav.tabs{
 	font-family: $system-font;
 	
 	ul.tabs{
-		margin: 15px 0 15px;
+		margin: 30px 0 30px;
+		display: flex;
 		
 		li{
 			margin: 0;
+			margin-left: -1px;
+			
 			a{
-				border: 1px solid #666;
+				border: 1px solid #eee;
 				transition: all $transition-speed;
-				border-radius: 4px;
-				font-size: 1.1rem;
+				font-size: 11px;
 				color: #3d3d3d;
 				text-transform: uppercase;
 				font-weight: bold;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 				
 				&:hover{
 					text-decoration: none;
-					background: #3d3d3d;
+					background: #000;
 					color: #fff;
+					border-color: #000;
+					
 				}
 				
 				&.is-active{
-					//background: $blue;
-					border-color: #fff;
+					background: rgba(#000, .5);
+					background: #000;
+					color: #fff;
+					border-color: #000;
 					
 					&:hover{
-						color: #3d3d3d;
-						border-color: #fff;
-						background: #fff;
+				//		color: #3d3d3d;
+					//	border-color: #fff;
+				//		background: #fff;
 					}
 				}
+			}
+			
+			&:first-child a{
+				border-radius: 4px 0 0 4px;
+			}
+			
+			&:last-child a{
+				border-radius: 0 4px 4px 0;
 			}
 		}
 	}
