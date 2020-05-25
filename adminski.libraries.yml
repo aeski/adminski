@@ -1,4 +1,4 @@
-global-styling:
+admin-styling:
   css:
     theme:
       #css/superfish.css: {}

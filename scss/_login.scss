@@ -1,17 +1,17 @@
-$login-highlight-colour: #92C2A5 !default;
-$login-background-stop1: #eee !default;
-$login-background-stop2: #f2f2f2 !default;
-$login-background-stop1-dark: #2D276F !default;
-$login-background-stop2-dark: #26215F !default;
-$image-path: "/themes/custom/d8template/images";
-
 body.custom-login{
-	background: linear-gradient(-200deg, $login-background-stop1, $login-background-stop2);	
+	font-size: 1.8rem;
+	font-family: $system-font, serif;
+	font-weight: 200;
+//	font-size: 100%;
+	line-height: 1.5em;
+
+	$background: linear-gradient(-200deg, $login-background-stop1, $login-background-stop2) !default;	
+	background: $background;
 	height: 100vh;	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+		
 	// Hide other bits that may be in theis region other than the user login form
 	.region-content > div{
 		display: none;
@@ -35,6 +35,12 @@ body.custom-login{
 		text-align: center;
 		margin: 20px auto 30px;
 		max-width: 200px;
+		height: 80px;
+		
+		svg{
+			max-width: 100%;
+			max-height: 100%;
+		}
 	}
 	
 	.form-item-name,
@@ -53,31 +59,34 @@ body.custom-login{
 		&::before{
 			display: inline-block;
 			position: absolute;
-			top: 1em;
+			top: .4em;
 			left: .75em;
-			content: "";
-			width: 15px;
-			height: 15px;
-			mask: url('#{$image-path}/icon-sprite.svg#person') no-repeat;
-			background: #fff;
-			transition: background .3s;
-			background: #ccc;
+			transition: all $transition-speed; 
 			
 			&:hover{
 				//background: red;
 			}
 		}
 		
+		// Using these for pseudo elements as we can't use pseudo elements on inputs.
 		&.form-item-name{
 			&::before{
-			
+				content: "\a019"; // User Icon
+				font-family: $system-icons;	
 			}
 		}
 		
 		&.form-item-pass{
 			&::before{
-				mask: url('#{$image-path}/icon-sprite.svg#lock');
+				//mask: image('icon-sprite.svg#lock');
+				content: "\a018"; // Key Icon
+				font-family: $system-icons;				
 			}
+		}
+		
+		// Change icon colour on focus
+		&:focus-within::before{
+			color: $login-highlight-colour;
 		}
 	}
 	
@@ -85,7 +94,8 @@ body.custom-login{
 		background: #fff;
 		outline: none;
 		border: none;
-		padding: 10px 10px 10px 30px;
+		border-left: 5px solid transparent;
+		padding: 10px 10px 10px 35px;
 		transition: border-left-color .2s;
 		width: 100%;
 		border-bottom: 1px solid #fff;
@@ -94,16 +104,25 @@ body.custom-login{
 		color: #1f1f1f;
 		background: #f2f2f2;
 		transition: all .2s;
+		font-size: .9em;
+		
+		&::before{
+				content: "\a019"; // User Icon
+				font-family: $system-icons;	
+		}
 			
 		&:focus{
 			border-color: $login-highlight-colour;
-			background: #fff;
 			color: #1f1f1f;
+			border: none;
+					border-bottom: 1px solid #fff;
+
 			border-left: 5px solid $login-highlight-colour;
 			
 			&::placeholder{
-				color: $login-highlight-colour;
+				//color: $login-highlight-colour;
 			}
+
 		}
 		
 		&::placeholder{

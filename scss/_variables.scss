@@ -1,0 +1,23 @@
+//----------------------------------------------
+//		Asset Paths use image('hero.jpg') etc.
+//----------------------------------------------
+/// Base path for assets (fonts, images...),
+$asset-base-path: '../';
+$image-path: 'images';
+$font-path: 'fonts';
+
+//----------------------------------------------
+//		System Variables
+//----------------------------------------------
+$system-icons: 'd8Template';
+$system-font: 'Helvetica Neue', helvetica, Arial, sans-serif;
+$transition-speed: .3s;
+
+//----------------------------------------------
+//		Login Page Variables
+//----------------------------------------------
+$login-highlight-colour: #92C2A5 !default;
+$login-background-stop1: #eee !default;
+$login-background-stop2: #f2f2f2 !default;
+$login-background-stop1-dark: #2D276F !default;
+$login-background-stop2-dark: #26215F !default;
