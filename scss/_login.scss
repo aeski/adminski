@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $login-highlight-colour: #92C2A5 !default;
 $login-background-stop1: #eee !default;
 $login-background-stop2: #f2f2f2 !default;
@@ -7,11 +8,44 @@ $image-path: "/themes/custom/d8template/images";
 
 body.custom-login{
 	background: linear-gradient(-200deg, $login-background-stop1, $login-background-stop2);	
+=======
+$normal-font-size: 16px;
+$messagas-font-size: 14px;
+$small-font-size: 13px;
+
+//-------------------------------
+//		Login Page Variables
+//-------------------------------
+:root {
+	--login-highlight-color: #92C2A5;
+	--login-background: #26215F;
+	--login-button-color: #1F1A52;
+	--login-button-hover-color: black;
+	--login-background-stop1-dark: #2D276F;
+	--login-background-stop2-dark: #26215F;
+}
+
+body.custom-login{
+	font-size: $normal-font-size;
+	font-family: $system-font, serif;
+	font-weight: 200;
+//	font-size: 100%;
+	line-height: 1.2em;
+
+	//background: linear-gradient(-200deg, var(--login-background-stop1), var(--login-background-stop2));
+	background: var(--login-background);
+	background: linear-gradient(-200deg, #{var(--login-background-stop1-dark)}, #{var(--login-background-stop2-dark)});
+	
+>>>>>>> 8c57593... should be on right branch
 	height: 100vh;	
 	display: flex;
 	align-items: center;
 	justify-content: center;
+<<<<<<< HEAD
 	
+=======
+		
+>>>>>>> 8c57593... should be on right branch
 	// Hide other bits that may be in theis region other than the user login form
 	.region-content > div{
 		display: none;
@@ -21,6 +55,14 @@ body.custom-login{
 		}
 	}
 	
+<<<<<<< HEAD
+=======
+	.region-messages > div{
+		padding: 0;
+		font-size: $messagas-font-size;
+	}
+	
+>>>>>>> 8c57593... should be on right branch
 	#login-wrapper{
 		padding: 40px;
 		max-width: 250px;
@@ -34,7 +76,18 @@ body.custom-login{
 		display: block;
 		text-align: center;
 		margin: 20px auto 30px;
+<<<<<<< HEAD
 		max-width: 200px;
+=======
+		margin-bottom: 0;
+		max-width: 200px;
+		max-height: 80px;
+		
+		svg{
+			max-width: 100%;
+			max-height: 100%;
+		}
+>>>>>>> 8c57593... should be on right branch
 	}
 	
 	.form-item-name,
@@ -53,6 +106,7 @@ body.custom-login{
 		&::before{
 			display: inline-block;
 			position: absolute;
+<<<<<<< HEAD
 			top: 1em;
 			left: .75em;
 			content: "";
@@ -62,30 +116,63 @@ body.custom-login{
 			background: #fff;
 			transition: background .3s;
 			background: #ccc;
+=======
+			//top: .4em;
+			line-height: 41px;
+			left: .75em;
+			transition: all $transition-speed; 
+>>>>>>> 8c57593... should be on right branch
 			
 			&:hover{
 				//background: red;
 			}
 		}
 		
+<<<<<<< HEAD
 		&.form-item-name{
 			&::before{
 			
+=======
+		// Using these for pseudo elements as we can't use pseudo elements on inputs.
+		&.form-item-name{
+			&::before{
+				content: "\a019"; // User Icon
+				font-family: $system-icons;	
+>>>>>>> 8c57593... should be on right branch
 			}
 		}
 		
 		&.form-item-pass{
 			&::before{
+<<<<<<< HEAD
 				mask: url('#{$image-path}/icon-sprite.svg#lock');
 			}
 		}
+=======
+				//mask: image('icon-sprite.svg#lock');
+				content: "\a018"; // Key Icon
+				font-family: $system-icons;				
+			}
+		}
+		
+		// Change icon color on focus
+		&:focus-within::before{
+			color: var(--login-highlight-color);
+		}
+>>>>>>> 8c57593... should be on right branch
 	}
 	
 	input.form-text{
 		background: #fff;
 		outline: none;
 		border: none;
+<<<<<<< HEAD
 		padding: 10px 10px 10px 30px;
+=======
+		border-radius: 0;
+		border-left: 5px solid transparent;
+		padding: 10px 10px 10px 35px;
+>>>>>>> 8c57593... should be on right branch
 		transition: border-left-color .2s;
 		width: 100%;
 		border-bottom: 1px solid #fff;
@@ -94,6 +181,7 @@ body.custom-login{
 		color: #1f1f1f;
 		background: #f2f2f2;
 		transition: all .2s;
+<<<<<<< HEAD
 			
 		&:focus{
 			border-color: $login-highlight-colour;
@@ -104,6 +192,27 @@ body.custom-login{
 			&::placeholder{
 				color: $login-highlight-colour;
 			}
+=======
+		//font-size: .9em;
+		
+		&::before{
+				content: "\a019"; // User Icon
+				font-family: $system-icons;	
+		}
+			
+		&:focus{
+			border-color: var(--login-highlight-color);
+			color: #1f1f1f;
+			border: none;
+					border-bottom: 1px solid #fff;
+
+			border-left: 5px solid var(--login-highlight-color);
+			
+			&::placeholder{
+				//color: var(--login-highlight-color;
+			}
+
+>>>>>>> 8c57593... should be on right branch
 		}
 		
 		&::placeholder{
@@ -117,15 +226,27 @@ body.custom-login{
 		text-align: center;
 		margin: 20px 0 20px 0;
 		
+<<<<<<< HEAD
 		input#edit-submit{
 			border: none;
 			border-radius: 0;
 			background: #2D276F;
+=======
+		
+	}
+	
+	input[type="submit"],
+	input#edit-submit{
+			border: none;
+			border-radius: 0;
+			background: var(--login-button-color);
+>>>>>>> 8c57593... should be on right branch
 			color: #fff;
 			padding: 10px 20px;
 			display: block;
 			width: 100%;
 			transition: all .2s;
+<<<<<<< HEAD
 			
 			&:hover{
 				background: $login-highlight-colour;
@@ -136,20 +257,70 @@ body.custom-login{
 	p{
 		color: #eee;
 		font-size: .9em;
+=======
+			margin: 10px 0;
+			
+			&:hover{
+				background: var(--login-button-hover-color);
+			}
+		}
+	
+	p{
+		color: #eee;
+		//font-size: .9em;
+		font-weight: 300;
+		font-size: $small-font-size;
+>>>>>>> 8c57593... should be on right branch
 	}
 	
 	#bottom_part{
 		text-align: center;
+<<<<<<< HEAD
 		font-size: 1.2rem;
 		
 		a{
 			color: #333;
+=======
+		font-size: $small-font-size;
+		
+		a{
+			color: #333;
+			text-decoration: none;
+			transition: all $transition-speed;
+			position: relative;
+			
+			&:hover{
+	//			text-decoration: underline;
+			}	
+			
+/*
+			&::after{
+				content: "";
+				width: 100%;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				transform: translateY(1px);
+				transition: all $transition-speed;
+			}
+			
+			&:hover::after{
+				border-bottom: 1px dotted #fff;
+				transform: translateY(3px);
+
+			}
+*/
+>>>>>>> 8c57593... should be on right branch
 		}
 	}
 	
 	// Dark theme version enabeled by placing dark class on body, through /admin/config/page-class/settings
 	&.dark{
+<<<<<<< HEAD
 		background: linear-gradient(-200deg, $login-background-stop1-dark, $login-background-stop2-dark);
+=======
+		
+>>>>>>> 8c57593... should be on right branch
 		
 		a#logo svg path{
 			fill: #fff;
@@ -161,7 +332,11 @@ body.custom-login{
 		
 		#edit-actions input#edit-submit{
 			background: #221D54;
+<<<<<<< HEAD
 			background: darken($login-background-stop1-dark,10%);
+=======
+			//background: darken(var(--background-stop1-dark),10%);
+>>>>>>> 8c57593... should be on right branch
 			
 			&:hover{
 				background: #3B338F;
