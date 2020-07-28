@@ -5,16 +5,19 @@
 // all pages.
 ////////////////////////////////////////////////////////////////////////////////
 
-//@import "vars"; // Imports default variables and mixins.
+@import "variables"; // Imports default variables and mixins.
 //@import "layout";   // Defines positioning of major page elements.
 //@import "base";     // Establishes general color and typography rules and browser resets.
 //@import "document"; // Default content styles.
 //@import "forms";   // Defines styling for login pages.
-@import "login";   // Defines styling for login pages.
 
 
 //@import "mmenu/mmenu";   // Defines Mobile Menu (mmenu) repsonsive menu system.
 //@import "modules";   // Defines module styles.
+@import "mixins"; // Imports mixins.
+
 @import "system";   // Defines system styles, such as tabs and notifications.
+@import "login";   // Defines styling for login pages.
+
 //@import "mobile";   // We can now define our mobile styles inline
 //@import "print";    // Defines styles for printing.
