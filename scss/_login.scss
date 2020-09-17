@@ -22,7 +22,7 @@ body.custom-login{
 	background: linear-gradient(-200deg, $login-background-stop1, $login-background-stop2);	
 	font-size: $normal-font-size;
 	font-family: $system-font;
-	font-weight: 200;
+	font-weight: 300;
 //	font-size: 100%;
 	line-height: 1.2em;
 	//background: linear-gradient(-200deg, var(--login-background-stop1), var(--login-background-stop2));
@@ -70,12 +70,14 @@ body.custom-login{
 	// Icons over inputs
 	div.form-item{
 		position: relative;
+		margin-bottom: 1em;
 		
 		&::before{
 			display: inline-block;
 			position: absolute;
 			//top: .4em;
 			line-height: 41px;
+			margin-top: 0;
 			left: .75em;
 			transition: all $transition-speed;
 			color: #999;
@@ -142,6 +144,10 @@ body.custom-login{
 		&::placeholder{
 			color: #999;
 			opacity: 1;
+			font-size: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			line-height: inherit;
 		}
 	}
 	
@@ -155,20 +161,22 @@ body.custom-login{
 	
 	input[type="submit"],
 	input#edit-submit{
-			border: none;
-			border-radius: 0;
-			background: var(--login-button-color);
-			color: #fff;
-			padding: 10px 20px;
-			display: block;
-			width: 100%;
-			transition: all .2s;
-			margin: 10px 0;
+		border: none;
+		border-radius: 0;
+		background: var(--login-button-color);
+		color: #fff;
+		padding: 10px 20px;
+		display: block;
+		width: 100%;
+		transition: all .2s;
+		margin: 10px 0;
+			background: #333;
+
 			
-			&:hover{
-				background: var(--login-button-hover-color);
-			}
+		&:hover{
+			background: var(--login-button-hover-color);
 		}
+	}
 	
 	p{
 		color: #eee;
