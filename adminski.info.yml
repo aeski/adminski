@@ -5,14 +5,13 @@ base theme: classy
 screenshot: images/screenshot.png
 logo: 'images/logo.svg'
 hidden: true
-version: '8.x-1.0'
+version: '8.x-9.0'
 project: 'adminski'
 core: '8.x'
 
 #Load theme css into wysiwyg
 #ckeditor_stylesheets:
 #  - css/style.min.css
-
 
 #Libraries
 libraries:
