@@ -1,0 +1,14 @@
+//----------------------------------------------
+//		Asset Paths use image('hero.jpg') etc.
+//----------------------------------------------
+/// Base path for assets (fonts, images...),
+$asset-base-path: '../';
+$image-path: 'images';
+$font-path: 'fonts';
+
+//----------------------------------------------
+//		System Variables
+//----------------------------------------------
+$system-icons: 'd8Template';
+$system-font: 'Helvetica Neue', helvetica, Arial, sans-serif;
+$transition-speed: .3s;

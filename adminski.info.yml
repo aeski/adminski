@@ -8,6 +8,7 @@ hidden: true
 version: '8.x-9.0'
 project: 'adminski'
 core: '8.x'
+core_version_requirement: ^8 || ^9
 
 #Load theme css into wysiwyg
 #ckeditor_stylesheets:

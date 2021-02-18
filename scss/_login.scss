@@ -3,188 +3,234 @@ $login-background-stop1: #eee !default;
 $login-background-stop2: #f2f2f2 !default;
 $login-background-stop1-dark: #2D276F !default;
 $login-background-stop2-dark: #26215F !default;
-$image-path: "/themes/custom/d8template/images";
+$image-path: "/themes/contrib/adminski/images";
+$normal-font-size: 16px;
+
+//-------------------------------
+//		Login Page Variables
+//-------------------------------
+:root {
+  --login-highlight-color: #92C2A5;
+  --login-background: #26215F;
+  --login-button-color: #0F0A3C;
+  --login-button-hover-color: black;
+  --login-background-stop1-dark: #2D276F;
+  --login-background-stop2-dark: #26215F;
+}
 
 body.custom-login{
-	background: linear-gradient(-200deg, $login-background-stop1, $login-background-stop2);	
-	height: 100vh;	
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-	// Hide other bits that may be in theis region other than the user login form
-	.region-content > div{
-		display: none;
-		
-		&.block-system-main-block{
-			display: block;
-		}
-	}
-	
-	#login-wrapper{
-		padding: 40px;
-		max-width: 250px;
-		transition: all .2s;
-		transform: translateY(30px);
-		opacity: 0;
-		transition: all .3s ease-out;
-	}
-	
-	a#logo{
-		display: block;
-		text-align: center;
-		margin: 20px auto 30px;
-		max-width: 200px;
-	}
-	
-	.form-item-name,
-	.form-item-pass{
-		label,
-		.description{
-			// Moved labels to placeholder text.
-			display: none;
-		}
-	}
-	
-	// Icons over inputs
-	div.form-item{
-		position: relative;
-		
-		&::before{
-			display: inline-block;
-			position: absolute;
-			top: 1em;
-			left: .75em;
-			content: "";
-			width: 15px;
-			height: 15px;
-			mask: url('#{$image-path}/icon-sprite.svg#person') no-repeat;
-			background: #fff;
-			transition: background .3s;
-			background: #ccc;
-			
-			&:hover{
-				//background: red;
-			}
-		}
-		
-		&.form-item-name{
-			&::before{
-			
-			}
-		}
-		
-		&.form-item-pass{
-			&::before{
-				mask: url('#{$image-path}/icon-sprite.svg#lock');
-			}
-		}
-	}
-	
-	input.form-text{
-		background: #fff;
-		outline: none;
-		border: none;
-		padding: 10px 10px 10px 30px;
-		transition: border-left-color .2s;
-		width: 100%;
-		border-bottom: 1px solid #fff;
-		box-sizing: border-box;
-		box-shadow: 0 2px 5px rgba(#000,.1);
-		color: #1f1f1f;
-		background: #f2f2f2;
-		transition: all .2s;
-			
-		&:focus{
-			border-color: $login-highlight-colour;
-			background: #fff;
-			color: #1f1f1f;
-			border-left: 5px solid $login-highlight-colour;
-			
-			&::placeholder{
-				color: $login-highlight-colour;
-			}
-		}
-		
-		&::placeholder{
-			color: #999;
-			opacity: 1;
-		}
-	}
-	
-	// Submit Button
-	#edit-actions{
-		text-align: center;
-		margin: 20px 0 20px 0;
-		
-		input#edit-submit{
-			border: none;
-			border-radius: 0;
-			background: #2D276F;
-			color: #fff;
-			padding: 10px 20px;
-			display: block;
-			width: 100%;
-			transition: all .2s;
-			
-			&:hover{
-				background: $login-highlight-colour;
-			}
-		}
-	}
-	
-	p{
-		color: #eee;
-		font-size: .9em;
-	}
-	
-	#bottom_part{
-		text-align: center;
-		font-size: 1.2rem;
-		
-		a{
-			color: #333;
-		}
-	}
-	
-	// Dark theme version enabeled by placing dark class on body, through /admin/config/page-class/settings
-	&.dark{
-		background: linear-gradient(-200deg, $login-background-stop1-dark, $login-background-stop2-dark);
-		
-		a#logo svg path{
-			fill: #fff;
-		}
-		
-		input.form-text{
-			box-shadow: 0 0px 10px rgba(#000,.2);
-		}
-		
-		#edit-actions input#edit-submit{
-			background: #221D54;
-			background: darken($login-background-stop1-dark,10%);
-			
-			&:hover{
-				background: #3B338F;
-			}
-		}
-		
-		#bottom_part a{
-			color: #eee;
-			
-			&:hover{
-				color: #fff;
-			}
-		}
-	}
-	
-	// For slight animations on load.
-	// These should probably be made to work even without js.
-	&.loaded{
-		#login-wrapper{
-			transform: translateY(0px);
-			opacity: 1;
-		}
-	}
+  background: linear-gradient(-200deg, $login-background-stop1, $login-background-stop2);
+  font-size: $normal-font-size;
+  font-family: $system-font;
+  font-weight: 400;
+//	font-size: 100%;
+  line-height: 1.2em;
+  //background: linear-gradient(-200deg, var(--login-background-stop1), var(--login-background-stop2));
+  background: var(--login-background);
+  background: linear-gradient(-200deg, #{var(--login-background-stop1-dark)}, #{var(--login-background-stop2-dark)});
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Hide other bits that may be in theis region other than the user login form
+  .region-content > div{
+    display: none;
+
+    &.block-system-main-block{
+      display: block;
+    }
+  }
+
+  #login-wrapper{
+    padding: 40px;
+    max-width: 250px;
+    transition: all .2s;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease-out;
+  }
+
+  a#logo{
+    display: block;
+    text-align: center;
+    margin: 20px auto 30px;
+    max-width: 200px;
+  }
+
+  .form-item-name,
+  .form-item-pass{
+    label,
+    .description{
+      // Moved labels to placeholder text.
+      display: none;
+    }
+  }
+
+  // Icons over inputs
+  div.form-item{
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before{
+      display: inline-block;
+      position: absolute;
+      //top: .4em;
+      line-height: 41px;
+      left: .75em;
+      transition: all $transition-speed;
+      color: #999;
+
+      &:hover{
+        //background: red;
+      }
+    }
+
+    // Using these for pseudo elements as we can't use pseudo elements on inputs.
+    &.form-item-name{
+      &::before{
+        content: "\a019"; // User Icon
+        font-family: $system-icons;
+      }
+    }
+
+    &.form-item-pass{
+      &::before{
+        //mask: image('icon-sprite.svg#lock');
+        content: "\a018"; // Key Icon
+        font-family: $system-icons;
+      }
+    }
+
+    // Change icon colour on focus
+    &:focus-within::before{
+      color: var(--login-highlight-colour);
+    }
+  }
+
+  input.form-text{
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 10px 10px 35px;
+    transition: border-left-color .2s;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    border-left: 5px solid transparent;
+
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(#000,.1);
+    color: #1f1f1f;
+    background: #f2f2f2;
+    transition: all .2s;
+    font-family: $system-font;
+    font-size: 1em;
+    //font-weight: 400;
+
+
+    &:focus{
+      border-color: var(--login-highlight-color);
+      color: #1f1f1f;
+      border: none;
+      border-bottom: 1px solid #fff;
+      border-left: 5px solid var(--login-highlight-color);
+
+      &::placeholder{
+        //color: var(--login-highlight-color;
+      }
+
+      ~ &::before{
+        color: red;
+      }
+    }
+
+    &::placeholder{
+      color: #999;
+      opacity: 1;
+      font-weight: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  // Submit Button
+  #edit-actions{
+    text-align: center;
+    margin: 20px 0 20px 0;
+
+
+  }
+
+  input[type="submit"],
+  input#edit-submit{
+      border: none;
+      border-radius: 0;
+      background: var(--login-button-color);
+      color: #fff;
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+      transition: all .2s;
+      margin: 10px 0;
+
+      &:hover{
+        background: var(--login-button-hover-color);
+      }
+    }
+
+  p{
+    color: #eee;
+    font-size: .9em;
+  }
+
+  #bottom_part{
+    text-align: center;
+    font-size: 1.2rem;
+
+    a{
+      color: #333;
+    }
+  }
+
+  // Dark theme version enabeled by placing dark class on body, through /admin/config/page-class/settings
+  &.dark{
+
+
+    a#logo svg path{
+      fill: #fff;
+    }
+
+    input.form-text{
+      box-shadow: 0 0px 10px rgba(#000,.2);
+    }
+
+    #edit-actions input#edit-submit{
+      background: #221D54;
+      //background: darken(var(--background-stop1-dark),10%);
+
+      &:hover{
+        background: #3B338F;
+      }
+    }
+
+    #bottom_part a{
+      color: #eee;
+
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+
+  // For slight animations on load.
+  // These should probably be made to work even without js.
+  &.loaded{
+    #login-wrapper{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 }
 
 

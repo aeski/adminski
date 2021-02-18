@@ -1,16 +1,11 @@
-$system-icons: 'd8Template';
-$system-font: 'Helvetica Neue', helvetica, Arial, sans-serif;
-$transition-speed: .3s;
-$font-path: "/themes/custom/d8template/fonts";
-
 @font-face {
   font-family: $system-icons;
-  src: url('#{$font-path}/d8template/d8template.eot');
-  src: url('#{$font-path}/d8template/d8template.eot?#iefix') format('embedded-opentype'),
-       url('#{$font-path}/d8template/d8template.woff2') format('woff2'),
-       url('#{$font-path}/d8template/d8template.woff') format('woff'),
-       url('#{$font-path}/d8template/d8template.ttf') format('truetype'),
-       url('#{$font-path}/d8template/d8template.otf') format('opentype');
+  src: font('icons.eot');
+  src: font('icons.eot?#iefix') format('embedded-opentype'),
+       font('icons.woff2') format('woff2'),
+       font('icons.woff') format('woff'),
+       font('icons.ttf') format('truetype'),
+       font('icons.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
