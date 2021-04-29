@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ * Theme override to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ */
+#}
+{%
+  set classes = [
+    'taxonomy-term',
+    'vocabulary-' ~ term.bundle|clean_class,
+  ]
+%}
+
+<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+	{{ title_prefix }}
+	{% if name and not page %}
+		<h2><a href="{{ url }}">{{ name }}</a></h2>
+	{% endif %}
+	{{ title_suffix }}
+  
+	{# Print the icon and title then pull in our view of child taxonomy terms #}
+	{# if on immersive experiences, MOS, Visitor access or hardware solutions #}
+	{% if (term.id == '16') or (term.id == '17') or (term.id == '39') or (term.id == '40') %}
+	
+	<div class="content wrapper with-sidebar">
+		{{ content
+			|without('field_icon')
+		}}
+
+		<aside class="right-sidebar">
+			<section class="content-metadata">
+				{{ content.field_icon.0 }} <h4>{{ name.0 }} </h4>
+				{{ drupal_view('child_terms', 'block_1') }}
+			</section>
+			<a class="button work-with-us" href="/contact">Start working with us</a>
+		</aside>
+		
+
+
+
+	</div>
+	{% else %}
+	
+		{% if content.field_body|render|striptags|trim %}
+		<div class="wrapper">
+		{{ content
+			|without('field_icon')
+		}}
+		</div>
+		{% endif %}
+   {% endif %}
+   
+</div>
