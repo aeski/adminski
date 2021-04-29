@@ -1,0 +1,892 @@
+@import "mixins"; // Imports custom mixins.
+@import "variables"; // Imports default variables and mixins.
+//-------------------------------------------
+//	Typography
+//-------------------------------------------
+$base-line-height: 2rem;
+
+html {
+	font-size: 62.5%; /* Sets up the Base 10 stuff */
+	-webkit-text-size-adjust: 100%;  // Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+	-ms-text-size-adjust: 100%;
+//	font-size: .8vmax;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include breakpoint($tablet){
+	//	font-size: .70vmax;	
+
+
+		font-size: 68.75%; // 11px;
+	}
+	
+	@include breakpoint($max-wrapper-width){
+//		font-size: .66vmin;	
+	}
+	
+	
+	@include breakpoint($laptop){
+		font-size: 75%; // 12px
+	}
+	
+	@include breakpoint($desktop-hd){
+		font-size: 81.25%; // 13px;
+	}
+}
+
+body{
+
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust: none;
+}
+
+
+h1{
+	margin: 1rem 0 $base-line-height;
+}
+
+.h1,h1{
+	font-size: 3.5rem; 
+	font-family: 'Ringside Narrow';
+	//line-height: calc(#{$base-line-height} * 2);
+	line-height: 4rem;
+	font-weight: 600; // Ringside Narrow Semibold 
+	text-indent: -2px;
+}
+
+.h2,
+h2{
+//	font-size: 3.25rem; // 39px @ 12base 
+	font-size: 2.25rem; // 272.39px @ 12base 
+	font-size: 3rem;
+	font-family: 'Ringside Narrow';
+	font-weight: 600; // Ringside Narrow Semibold 
+	//line-height: calc(2 * #{$base-line-height});
+	line-height: 3.5rem;
+	position: relative;
+}
+
+.page-title{
+	text-transform: uppercase;
+}
+
+.page-subtitle{
+	margin-top: 0;
+	font-family: 'GTSectra';
+	font-weight: 500; // GT Sectra Medium
+//	font-size: 2.75rem;
+	margin-bottom: 0;
+}
+
+.gtsectra-large{
+//	font-size: 3.25rem;
+	font-family: 'GTSectra';
+	font-weight: 500; // GT Sectra Medium
+}
+
+h2{
+	margin-bottom: calc(1.5 * #{$base-line-height};
+	margin-top: calc(2.5 * #{$base-line-height});
+}
+
+.h3,
+h3{
+	font-size: 2.25rem; // 27px @ laptop
+	font-family: 'Ringside Narrow';
+	line-height: $base-line-height;
+	font-weight: 600; // Ringside Narrow Semibold 
+//	@extend %font-smoothing;	
+	line-height: 2.75rem;
+}
+
+h3{
+	margin-bottom: $base-line-height;
+	margin-top: $base-line-height;	
+}
+
+.h4,
+h4{
+	font-family: 'Ringside Narrow';
+	font-weight: 600; // Ringside Narrow Semibold 
+	line-height: $base-line-height;
+//	font-size: 2rem;
+//	@extend %font-smoothing;
+
+	font-size: 1.75rem; // 21px @ laptop
+}
+
+h4{
+	margin: $base-line-height 0;
+}
+
+.h5,
+h5{
+	font-size: 1.5rem;
+	font-family: 'Ringside Narrow';
+	//font-weight: 500;
+	font-size: inherit;
+	line-height: $base-line-height;
+
+	//text-transform: uppercase;
+}
+
+// Also used for labels
+.h6,
+h6{
+	font-size: 1.5rem;
+	font-family: 'Ringside Narrow';
+	font-weight: 600; // Ringside Narrow Semibold 
+	line-height: $base-line-height;
+//	@extend %font-smoothing;
+	//text-transform: uppercase;
+}
+
+
+.gtsectra{
+	font-family: 'GTSectra';
+	//font-weight: 300; //GTSectra Regulat
+	
+	&.medium{
+		font-weight: 500;
+	}
+}
+
+body.cke_editable,
+#page{
+	font-size: 1.5rem;
+	font-family: 'Acumin Pro', serif;
+	//font-weight: normal;
+//	font-size: 100%;
+	line-height: $base-line-height;
+}
+
+
+// Using 16px for mobile and 18px for desktop
+p,
+body.cke_editable li,
+.text-formatted.field li,
+.field-value/*,
+.region-content li*/{
+	margin: 0;
+	//font-size: 1.7rem;
+	font-size: 1.5rem;
+//	font-weight: 300;
+//	color: #333;
+//	@extend %font-smoothing;
+	
+	@include breakpoint($tablet){
+//		font-size: 17px;
+		
+	}
+	
+	@include breakpoint($laptop){
+//		font-size: 18px;
+		
+	}
+	
+	@include breakpoint($desktop){
+//		font-size: 19px;
+		
+	}
+	
+	@include breakpoint($desktop-hd){
+//		font-size: 20px;
+		
+	}
+}
+
+hr,
+p{
+	margin: 0 0 $base-line-height 0;
+}
+
+hr{
+	border: none;
+	border-bottom: 1px solid var(--font-color);
+	clear: both;
+	//margin: var(--vertical-padding) 0;
+}
+
+body.cke_editable li,
+.text-formatted.field .field-value li{
+	margin: calc(#{$base-line-height} / 2) 0; 
+}
+
+q{
+	//font-weight: 400;
+	
+	&.pullout{
+		display: block;
+		//font-size: 1.5em;
+		line-height: calc(1.5 * #{$base-line-height});
+		font-style: italic;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+
+	}
+}
+
+
+
+::selection {
+  background: rgba($ap-burnt-ochre,.5); /* WebKit/Blink Browsers */
+}
+
+
+blockquote{
+	padding: 0 2em;
+	//margin: 2em;
+	margin: calc(2 * #{$base-line-height}) 0;
+	border-left: 1px solid $ap-burnt-ochre;
+	border-left: 1px solid $ap-tan;
+	border-left: 1px solid $ap-ivory;
+	
+	font-family: 'GTSectra';
+	font-size: 1.75rem;
+
+
+	
+	p{
+		font-size: 1.75rem;
+		color: $ap-black;
+	//	font-weight: 500;
+	line-height: 2.5rem;
+	
+		&.quotee{
+			font-family: $body-font;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+	}
+	
+	h5,h4,h3{
+		margin-bottom: 0;
+	}
+	
+	
+}
+
+//body.cke_editable a,
+//.region-content a{
+	
+%link{
+	color: inherit;
+	text-decoration: underline;
+	transition: color $transition-speed;
+	position: relative;
+		
+
+//	&::before,
+/*
+	&::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: -1px;
+		z-index: 1;
+		border-bottom: 2px dotted $ap-teal;
+		left: 0px;
+		transition: all $transition-speed ease-in-out;
+	//	transform: translateY(-3px);
+	//	opacity: 0;
+	}
+*/
+		
+	&:hover{
+		//text-decoration: none;
+		color: $ap-teal;
+		//color: #fff;
+
+		//background: #000;
+		//color: #fff;
+		
+/*
+		&::after{
+			transform: translateY(2px);	
+			//width: calc(100% + 6px);
+			//height: calc(100% + 6px);				
+			border-color: $ap-teal;
+			border-bottom-style: solid;
+			//width: 80%;
+			//left: 10%;
+			
+			//left: -3px;
+			//background: $ap-teal;
+		}
+*/
+	}
+	
+	&:focus{
+//		border: none;
+//		outline: none;
+	}
+	
+	&.button{
+	//	@extend .button--primary;
+	}
+}
+
+main .text-formatted a:not(.button){
+	@extend %link;
+}
+
+.content-metadata .views-row a{
+//	@extend %link;
+}
+
+a{
+	transition: all $transition-speed;
+}
+
+
+p > a{
+}
+
+b, strong{
+//	@extend %font-smoothing;	
+}
+
+
+
+//------------------------------------------------------------------------
+//		Buttons and links
+//------------------------------------------------------------------------
+html, button, input, select, textarea {
+//	font-family: $body-font;
+//	color: $main-text-color;
+}
+
+a.button{
+	@extend .button--primary;
+	text-decoration: none;
+}
+
+label{
+	font-size: 1.5rem;
+	//text-transform: uppercase;
+	//font-family: $title-font;
+	font-weight: bold;
+}
+
+
+@import "forms";   // Defines styling for login pages.
+
+
+/*
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('https://artprocessors.net/themes/custom/artpro/fonts/AcuminPro-Regular.woff2') format('woff2'),
+        url('https://artprocessors.net/themes/custom/artpro/fonts/AcuminPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ //   font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('https://artprocessors.net/themes/custom/artpro/fonts/AcuminPro-Bold.woff2') format('woff2'),
+        url('https://artprocessors.net/themes/custom/artpro/fonts/AcuminPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+   // font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: url('https://artprocessors.net/themes/custom/artpro/fonts/AcuminPro-Italic.woff2') format('woff2'),
+        url('https://artprocessors.net/themes/custom/artpro/fonts/AcuminPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+  //  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ringside Narrow';
+    src: url('https://artprocessors.net/themes/custom/artpro/fonts/RingsideNarrow-Semibold.woff2') format('woff2'),
+        url('https://artprocessors.net/themes/custom/artpro/fonts/RingsideNarrow-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ringside Narrow';
+    src: url('https://artprocessors.net/themes/custom/artpro/fonts/RingsideNarrow-Medium.woff2') format('woff2'),
+        url('https://artprocessors.net/themes/custom/artpro/fonts/RingsideNarrow-Medium.woff') format('woff');
+    //font-weight: 500;
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+:root {
+    /*
+    We recommend you change these values to match your brand.
+    The light color has an opacity of .1, do not modify that
+    */
+    --primary-brand-color: rgba(53, 116, 214, 1);
+    --light-primary-brand-color: rgba(53, 116, 214, .1);
+
+    /* We recommend not changing these colors */
+    --full-page-background-color: #ffffff;
+    --application-background-color: #FFF;
+    --footer-color: #F3F3F3;
+    --main-text-color: #222222;
+    --sub-header-color: black;
+    --link-color: $ap-teal;
+    --field-border-color: #E1E1E1;
+}
+
+body {
+    background-color: var(--full-page-background-color);
+    background: none;
+
+}
+
+body #wrapper {
+    background-color: white;
+    min-height: 100vh;
+    max-width: none;
+    padding: 0px;
+   	     font-family: $body-font;
+		 font-size: 18px;
+    	line-height: 24px;   
+
+    
+    .accessible #content,
+    #application{
+	     font-family: $body-font;
+		 font-size: 18px;
+    	line-height: 24px;   
+    }
+}
+
+// Job board
+#wrapper{
+	padding: 0 !important;
+	
+	> h1,
+	> h2,
+	> h3{
+		display: none;
+	}
+	
+	h2.heading,
+	h1.app-title,
+	h3{
+			flex: 0 0 100%;
+			margin: 40px 0 40px 50px;
+			font-weight: 600;
+			font-family: $title-font;
+			font-size: 30px;
+			text-transform: uppercase;
+	}
+	
+	h1.app-title{
+		margin-left: 0;
+	}
+	
+	> section{
+		display: flex;
+		flex-flow: row wrap;
+		
+		margin-left: -50px;
+		&::after,
+		.opening{
+			flex-basis: 40%;
+			flex-grow: 1;
+			margin-left: 50px;
+			margin-bottom: 50px;
+		}
+		
+		
+		
+		.opening{
+			border-bottom: 2px solid #000;
+			padding-bottom: 40px;
+			
+			a{
+				font-family: $title-font;
+				color: #000;
+				font-size: 27px;
+				font-weight: 600;
+				line-height: 33px;
+				position: relative;
+				display: block;
+				padding-left: 40px;
+				transition: all .3s ease-in-out;
+				
+				&::before{
+					content: "";
+					width: 25px;
+					height: 20px;
+					left: 0;
+					top: 3px;
+					background: url('https://artprocessors.net/themes/custom/artpro/images/icon-arrow-right.svg') no-repeat;
+					background-size: contain;
+					position: absolute;
+					display: block;
+				}
+				
+				&:hover{
+					text-decoration: underline;
+					background: none;
+					color: inherit;
+					transform: translateX(12px);
+				}
+			}
+			
+			
+		}
+		
+		&::after{
+			content: "";
+		}
+	}
+	
+	.location{
+				text-transform: uppercase;
+				font-family: $body-font;
+				font-size: 18px;
+				margin: 0;
+			    display: block;
+			    color: #000;
+			    margin-top: 0px;
+				padding-left: 40px;
+	}
+}
+
+#app_body {
+	h1.app-title,
+	.location{
+		padding-left: 0 !important;
+	}
+	
+	#header{
+		padding-bottom: 50px;
+	}
+}
+
+/* Select Boxes */
+#main .select2-choice {
+    height: 35px;
+}
+
+#main .select2-chosen {
+    line-height: 35px;
+}
+
+#main .select2-arrow {
+    padding-top: 4px;
+    padding-right: 4px;
+}
+
+#main .filter-label {
+    color: var(--sub-header-color);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Job Board Page */
+#main > h1:not(.app-title) {
+    /* Hide the company name in favor of a Logo that includes it */
+    display: none;
+}
+
+
+
+#board_title {
+    //margin: 0 0 16px 0;
+    //font-size: 22px;
+    //line-height: 36px;
+    //font-weight: 400;
+    display: none;
+}
+
+section {
+    margin-top: 16px;
+}
+
+section > h3 {
+    margin-top: 32px;
+}
+
+#logo {
+    display: inline-block;
+    display: none;
+}
+
+body #content {
+/*
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+*/
+}
+
+#main section h3 {
+/*
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 0;
+*/
+}
+
+#main section .location {
+ //   margin-top: -24px;
+}
+
+#main section .opening {
+   // padding-top: 10px;
+    //margin-bottom: 10px;
+}
+
+section .opening a {
+/*
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--main-text-color);
+    @extend h3;
+*/
+}
+
+section .opening a {
+    /* We want to increase the click area and background area of links to jobs,
+    so we combine padding and negative margin */
+/*
+    display: block;
+    height: 44px;
+    width: 100%;
+    margin-bottom: -20px;
+    padding-bottom: 0;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-top: 12px;
+    margin-top: -12px;
+    position: relative;
+    z-index: 1;
+*/
+}
+
+section .opening a:hover {
+    background-color: var(--light-primary-brand-color);
+    border-radius: 3px;
+    color: var(--main-text-color);
+}
+
+body #footer {
+    border: none;
+    background-color: var(--footer-color);
+    height: 60px;
+    margin-top: -80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+body #footer .privacy-policy {
+    line-height: 19px;
+}
+
+body #footer img {
+    width: 90px;
+}
+
+h3#filter-count {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* Job Post Page */
+div#main div#app_body {
+    padding-left: 0 !important;
+    padding-right: 0;
+}
+
+div#app_body #header {
+    display: flex;
+    flex-direction: column;
+}
+
+div#app_body #header #apply_button {
+    order: 3;
+    margin-top: 37px
+}
+
+div#app_body #header .company-name {
+    display: none;
+}
+
+div#app_body #header > a {
+    order: 1;
+}
+
+div#app_body #header .app-title {
+    order: 2;
+}
+
+div#app_body #header .location {
+    order: 4;
+    margin-top: 2px;
+}
+
+div#main #application_form h2.heading {
+    color: var(--main-text-color);
+    font-weight: 400;
+}
+
+div#app_body .app-title {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+div#app_body div#header #apply_button {
+    top: auto;
+    background-color: var(--primary-brand-color);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+div#submit_buttons input#submit_app {
+    background-color: var(--primary-brand-color);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: "Nunito Sans", 'sans-serif';
+    font-weight: 600;
+}
+
+div#app_body {
+    max-width: none;
+    padding-right: 20px;
+}
+
+div#content {
+    padding-bottom: 16px;
+}
+
+div#application hr:nth-last-of-type(1) {
+    display: none;
+}
+
+div#application {
+    background-color: var(--application-background-color);
+    border-top: 1px solid var(--field-border-color);
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+}
+
+div#main_fields, div#custom_fields {
+    font-weight: 400;
+    line-height: 26px;
+}
+
+div#application div.field label {
+    color: var(--sub-header-color);
+    display: block;
+    float: none;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+}
+
+div#application div.field label span.asterisk {
+    font-size: 12px;
+}
+
+div#application #main_fields div.field textarea {
+    margin-left: 0;
+}
+
+div#application div.field input[type=text] {
+    border: solid 1px var(--field-border-color);
+    height: 25px;
+    padding-left: 12px;
+    width: 455px;
+}
+
+@media (max-width: 640px) {
+    div#application div.field input[type=text] {
+        width: 100%;
+    }
+}
+
+div#application div.field input[placeholder="MM"] {
+    padding-left: 10px;
+}
+
+div#application div.field input[placeholder="YYYY"] {
+    padding-left: 7px;
+}
+
+div#application legend {
+    float: none;
+}
+
+div.link-container a {
+    //color: var(--link-color);
+    //font-size: 14px;
+}
+
+div#application a#add_education {
+    margin-left: 0;
+}
+
+div#field {
+    margin-bottom: 10px;
+}
+
+#main_fields div.field div.field-error-msg {
+    padding-left: 0;
+}
+
+div.field div.msg-container {
+    padding-top: 5px;
+}
+
+#application .field .select2-container {
+    margin-top: 0;
+}
+
+div#application div.field a.locate-me {
+    display: block;
+}
+
+div#application div.field textarea {
+    border-color: var(--field-border-color);
+    width: 455px;
+}
+
+@media (max-width: 640px) {
+    div#application div.field textarea {
+        width: 100%;
+    }
+}
+
+div#application div.field div.select2-container {
+    width: 455px !important;
+}
+
+@media (max-width: 640px) {
+    div#application div.field div.select2-container {
+        width: 100% !important;
+    }
+}
+
+div.s3-upload-form {
+    display: none;
+}
+
+/* Confirmation Page */
+#main #view-more {
+    text-align: left;
+    padding-top: 0;
+}
+
+#main strong > a {
+    color: var(--link-color);
+    font-weight: 400;
+}

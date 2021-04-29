@@ -1,0 +1,448 @@
+// Fonts converted using https://transfonter.org with 'fix vertical metrics' and 'family support' switched on
+//-------------------------------------------
+//	Acumin Pro
+//-------------------------------------------
+@font-face {
+    font-family: 'Acumin Pro';
+    src: font('AcuminPro-Regular.woff2') format('woff2'),
+        font('AcuminPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ //   font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: font('AcuminPro-Bold.woff2') format('woff2'),
+        font('AcuminPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+   // font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    src: font('AcuminPro-Italic.woff2') format('woff2'),
+        font('AcuminPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+  //  font-display: swap;
+}
+
+
+//-------------------------------------------
+//	GT Sectra
+//-------------------------------------------
+@font-face {
+    font-family: 'GTSectra';
+    src: font('GTSectra-Medium.woff2') format('woff2'),
+        font('GTSectra-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTSectra';
+    src: font('GTSectra-Regular.woff2') format('woff2'),
+        font('GTSectra-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+//-------------------------------------------
+//	Ringside Narrow
+//-------------------------------------------
+@font-face {
+    font-family: 'Ringside Narrow';
+    src: font('RingsideNarrow-Semibold.woff2') format('woff2'),
+        font('RingsideNarrow-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ringside Narrow';
+    src: font('RingsideNarrow-Medium.woff2') format('woff2'),
+        font('RingsideNarrow-Medium.woff') format('woff');
+    //font-weight: 500;
+    font-weight: normal;
+    font-style: normal;
+}
+
+%font-smoothing{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+//-------------------------------------------
+//	Typography
+//-------------------------------------------
+$base-line-height: 2rem;
+
+html {
+	font-size: 62.5%; /* Sets up the Base 10 stuff */
+	-webkit-text-size-adjust: 100%;  // Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+	-ms-text-size-adjust: 100%;
+//	font-size: .8vmax;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include breakpoint($tablet){
+	//	font-size: .70vmax;
+
+
+		font-size: 68.75%; // 11px;
+	}
+
+	@include breakpoint($max-wrapper-width){
+//		font-size: .66vmin;
+	}
+
+
+	@include breakpoint($laptop){
+		font-size: 75%; // 12px
+	}
+
+	@include breakpoint($desktop-hd){
+		font-size: 81.25%; // 13px;
+	}
+}
+
+body{
+
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust: none;
+}
+
+
+h1{
+	margin: 1rem 0 $base-line-height;
+}
+
+.h1,h1{
+	font-size: 3.5rem;
+	font-family: 'Ringside Narrow', sans-serif;
+	//line-height: calc(#{$base-line-height} * 2);
+	line-height: 4rem;
+	font-weight: 600; // Ringside Narrow Semibold
+	text-indent: -2px;
+}
+
+.h2,
+h2{
+//	font-size: 3.25rem; // 39px @ 12base
+	font-size: 2.25rem; // 272.39px @ 12base
+	font-size: 3rem;
+	font-family: 'Ringside Narrow', sans-serif;
+	font-weight: 600; // Ringside Narrow Semibold
+	//line-height: calc(2 * #{$base-line-height});
+	line-height: 3.5rem;
+	position: relative;
+}
+
+.page-title{
+	text-transform: uppercase;
+}
+
+.page-subtitle{
+	margin-top: 0;
+	font-family: 'GTSectra', serif;
+	font-weight: 500; // GT Sectra Medium
+//	font-size: 2.75rem;
+	margin-bottom: 0;
+}
+
+.gtsectra-large{
+//	font-size: 3.25rem;
+	font-family: 'GTSectra', serif;
+	font-weight: 500; // GT Sectra Medium
+}
+
+h2{
+	margin-bottom: calc(1.5 * #{$base-line-height};
+	margin-top: calc(2.5 * #{$base-line-height});
+}
+
+.h3,
+h3{
+	font-size: 2.25rem; // 27px @ laptop
+	font-family: 'Ringside Narrow', sans-serif;
+	line-height: $base-line-height;
+	font-weight: 600; // Ringside Narrow Semibold
+//	@extend %font-smoothing;
+	line-height: 2.75rem;
+}
+
+h3{
+	margin-bottom: $base-line-height;
+	margin-top: $base-line-height;
+}
+
+.h4,
+h4{
+	font-family: 'Ringside Narrow', sans-serif;
+	font-weight: 600; // Ringside Narrow Semibold
+	line-height: $base-line-height;
+//	font-size: 2rem;
+//	@extend %font-smoothing;
+
+	font-size: 1.75rem; // 21px @ laptop
+}
+
+h4{
+	margin: $base-line-height 0;
+}
+
+.h5,
+h5{
+	font-size: 1.5rem;
+	font-family: 'Ringside Narrow', sans-serif;
+	//font-weight: 500;
+	font-size: inherit;
+	line-height: $base-line-height;
+
+	//text-transform: uppercase;
+}
+
+// Also used for labels
+.h6,
+h6{
+	font-size: 1.5rem;
+	font-family: 'Ringside Narrow', sans-serif;
+	font-weight: 600; // Ringside Narrow Semibold
+	line-height: $base-line-height;
+//	@extend %font-smoothing;
+	//text-transform: uppercase;
+}
+
+
+.gtsectra{
+	font-family: 'GTSectra', serif;
+	//font-weight: 300; //GTSectra Regulat
+
+	&.medium{
+		font-weight: 500;
+	}
+}
+
+body.cke_editable,
+#page{
+	font-size: 1.5rem;
+	font-family: 'Acumin Pro', sans-serif;
+	//font-weight: normal;
+//	font-size: 100%;
+	line-height: $base-line-height;
+}
+
+
+// Using 16px for mobile and 18px for desktop
+p,
+body.cke_editable li,
+.text-formatted.field li,
+.field-value/*,
+.region-content li*/{
+	margin: 0;
+	//font-size: 1.7rem;
+	font-size: 1.5rem;
+//	font-weight: 300;
+//	color: #333;
+//	@extend %font-smoothing;
+
+	@include breakpoint($tablet){
+//		font-size: 17px;
+
+	}
+
+	@include breakpoint($laptop){
+//		font-size: 18px;
+
+	}
+
+	@include breakpoint($desktop){
+//		font-size: 19px;
+
+	}
+
+	@include breakpoint($desktop-hd){
+//		font-size: 20px;
+
+	}
+}
+
+hr,
+p{
+	margin: 0 0 $base-line-height 0;
+}
+
+hr{
+	border: none;
+	border-bottom: 1px solid var(--font-color);
+	clear: both;
+	//margin: var(--vertical-padding) 0;
+}
+
+body.cke_editable li,
+.text-formatted.field .field-value li{
+	margin: calc(#{$base-line-height} / 2) 0;
+}
+
+q{
+	//font-weight: 400;
+
+	&.pullout{
+		display: block;
+		//font-size: 1.5em;
+		line-height: calc(1.5 * #{$base-line-height});
+		font-style: italic;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+
+	}
+}
+
+
+
+::selection {
+  background: rgba($ap-burnt-ochre,.5); /* WebKit/Blink Browsers */
+}
+
+
+blockquote{
+	padding: 0 2em;
+	//margin: 2em;
+	margin: calc(2 * #{$base-line-height}) 0;
+	border-left: 1px solid $ap-burnt-ochre;
+	border-left: 1px solid $ap-tan;
+	border-left: 1px solid $ap-ivory;
+
+	font-family: 'GTSectra', serif;
+	font-size: 1.75rem;
+
+
+
+	p{
+		font-size: 1.75rem;
+		color: $ap-black;
+	//	font-weight: 500;
+	line-height: 2.5rem;
+
+		&.quotee{
+			font-family: $body-font;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+	}
+
+	h5,h4,h3{
+		margin-bottom: 0;
+	}
+
+
+}
+
+//body.cke_editable a,
+//.region-content a{
+
+%link{
+	color: inherit;
+	text-decoration: underline;
+	transition: color $transition-speed;
+	position: relative;
+
+
+//	&::before,
+/*
+	&::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: -1px;
+		z-index: 1;
+		border-bottom: 2px dotted $ap-teal;
+		left: 0px;
+		transition: all $transition-speed ease-in-out;
+	//	transform: translateY(-3px);
+	//	opacity: 0;
+	}
+*/
+
+	&:hover{
+		//text-decoration: none;
+		color: $ap-teal;
+		//color: #fff;
+
+		//background: #000;
+		//color: #fff;
+
+/*
+		&::after{
+			transform: translateY(2px);
+			//width: calc(100% + 6px);
+			//height: calc(100% + 6px);
+			border-color: $ap-teal;
+			border-bottom-style: solid;
+			//width: 80%;
+			//left: 10%;
+
+			//left: -3px;
+			//background: $ap-teal;
+		}
+*/
+	}
+
+	&:focus{
+//		border: none;
+//		outline: none;
+	}
+
+	&.button{
+	//	@extend .button--primary;
+	}
+}
+
+main .text-formatted a:not(.button){
+	@extend %link;
+}
+
+.content-metadata .views-row a{
+//	@extend %link;
+}
+
+a{
+	transition: all $transition-speed;
+}
+
+
+p > a{
+}
+
+b, strong{
+//	@extend %font-smoothing;
+}
+
+
+
+//------------------------------------------------------------------------
+//		Buttons and links
+//------------------------------------------------------------------------
+html, button, input, select, textarea {
+//	font-family: $body-font;
+//	color: $main-text-color;
+}
+
+a.button{
+	@extend .button--primary;
+	text-decoration: none;
+}
+
+label{
+	font-size: 1.5rem;
+	//text-transform: uppercase;
+	//font-family: $title-font;
+	font-weight: bold;
+}
+

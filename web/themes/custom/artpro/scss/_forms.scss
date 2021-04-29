@@ -1,0 +1,220 @@
+//------------------------------------------------------------------------
+//		Form Styling
+//------------------------------------------------------------------------
+/*
+label{
+	font-size: 18px;
+//	text-transform: uppercase;
+	font-family: $title-font;
+	font-weight: 600;
+}
+*/
+
+.form-item{
+	margin: 0 0 calc(.5 * #{var(--vertical-padding)}) 0;
+//	margin-bottom: ;
+
+	
+	> label{
+		display: block;
+/*
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		font-family: $title-font;
+		font-weight: 600;
+*/
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	textarea{
+		border-radius: 0;
+		border: none;
+		border-bottom: $border-width solid $ap-black;
+		transition: all $transition-speed;
+		padding: .5 * $base-line-height 0;
+		margin-top: 0;
+		width: 100%;
+		
+		&:focus{
+			outline: none;
+			box-shadow: none;
+			border-color: $ap-teal;
+		}
+	}
+	
+	&.webform-element--title-inline{
+		> label{
+			display: inline-block;
+			width: 130px;
+		}
+		
+		// Textarea labels come to the top, other stay centred.
+		&.form-type-textarea > label{
+			vertical-align: top;
+		}
+		
+		.form-textarea-wrapper{
+			display: inline-block;
+		}
+	}
+	
+	
+}
+
+.button{
+	margin-left: 0;
+	margin-right: 0px;
+	
+	&:first-child{
+		margin-right: 40px;
+	}
+}
+
+// Submit button
+.button--primary{
+	//@extend label;
+	@extend .h4;
+	line-height: 2em;
+	border: $border-width solid var(--font-color);
+	background: none;
+	transition: all $transition-speed;
+	color: var(--font-color);
+	//padding: calc(.5 * #{$base-line-height}) 1.5em;
+//	font-weight: normal;
+	padding: 0 1em;
+	margin-bottom: calc(1 * #{$base-line-height};
+	margin-top: calc(1 * #{$base-line-height});
+	width: max-content;
+	display: inline-block;
+	border-radius: 2.5rem;
+		
+
+	&::after{
+		display: none;
+	}
+	
+	&:hover{
+		//background: lighten($primary-button-colour,10%);	
+		background: var(--font-color);
+		color: var(--font-color-invert);
+	}
+	
+	&.dark {
+		border-color: #fff;
+		color: #fff;
+		
+		&:hover{
+			background: #fff;
+			color: $ap-black;
+		}
+	}
+}
+
+
+::placeholder{
+	opacity: 1;
+	@extend .h6;
+
+}
+
+input
+
+//------------------------------------------------------------------------
+//		Checkboxes
+//------------------------------------------------------------------------
+/*
+input.form-checkbox{
+	appearance: none;
+	-webkit-appearance: none;
+	width: 13px;
+	height: 13px;
+	
+	outline: 2px solid $pink;
+	background: none;
+	
+	&:checked{
+		background: $pink;
+	}
+	
+	~ label{
+		font-size: 1.4rem;
+		padding-left: 10px;
+	}
+}
+
+span.fieldset-legend{
+	@extend h3;
+}
+*/
+
+
+//------------------------------------------------------------------------
+//		Views Filters for case studies
+//------------------------------------------------------------------------
+.view-filters{
+	margin-bottom: 50px;
+}
+
+.form-checkboxes .form-checkboxes{
+	 display: flex;
+	 flex-flow: row wrap;
+	 //justify-content: center;
+	 //width: 100%;
+	 margin-left: -10px;
+
+	> .form-item{
+		margin-left: 10px;
+		margin-bottom: 10px;
+		margin-top: 0;
+		margin-right: 0;
+	}
+}
+ 
+ input[type="checkbox"]{
+	display: none;
+	
+	~ label{
+		padding: 5px 10px;
+		border: 1px solid #000;
+		cursor: pointer;
+		transition: all $transition-speed;
+		
+		&:hover{
+			border-color: $ap-teal;
+			color: $ap-teal;
+		}
+	}
+	
+	&[checked="checked"] ~ label{
+		color: #fff;
+		background: #000;
+		
+		&:hover{
+			border-color: #000;
+	//		color: $ap-teal;
+		}
+	}
+	
+}
+
+#views-exposed-form-case-studies-block-1 fieldset{
+	float: none;
+	
+	> legend{
+		 margin: 0 auto;
+		 display: block;
+	 }
+
+}
+
+
+
+/*
+input[checked="checked"] ~ label{
+	font-size: 30px;
+
+}
+*/
+

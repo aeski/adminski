@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Theme override to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ */
+#}
+
+{# <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}> #}
+{#   <div class="content"> #}
+{#     {{ kint(content) }} #}
+
+
+	{# Custom Taxonomy field / view mode template for displaying the sector field on project nodes by combining the title and secot nodes to display as though they were two seperate fields from the node template #}    
+	<div class="field field--name-field-partner field--type-partner field--label-inline clearfix field-wrapper">
+		<span class="field--name-field-partner field__label">{% if content.field_distinct|render|join|striptags|trim == 'True' %}Partner{% else %}Client{% endif %}</span>
+		<div class="field__items">
+				<div class="field__item">
+					{# If term is has distinct checkboxed checked we link to the terms page, else just print its name #}
+					{% if content.field_distinct|render|join|striptags|trim == 'True' %}
+						<a href="{{ url }}">{{ name.0 }}</a>
+					{% else %}
+						{{ name.0 }}
+					{% endif %}
+				</div>
+		</div>
+	</div>
+{# 	{{ kint(term) }} #}
+{#{% if term.published() == '1' %} do thing is published 
+	{{ term.published() }}
+{#
+#}
+
+    {{ content.field_sector }}
+    
+    
+{#   </div> #}
+{# </div> #}

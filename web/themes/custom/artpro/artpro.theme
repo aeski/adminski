@@ -1,0 +1,217 @@
+<?php
+use \Drupal\file\Entity\File;
+use \Drupal\Core\Template\Attribute;
+use \Drupal\Core\Url;
+
+/* For testing system messages 
+drupal_set_message('This is an error', 'error');
+drupal_set_message('ERROR2', 'error');
+drupal_set_message('WARNING', 'warning');
+drupal_set_message('OK');
+drupal_set_message('OK2'); 
+*/
+
+
+// Put placeholder text on login form inputs
+function artpro_form_user_login_form_alter(&$form, $form_state) {
+  $form['name']['#placeholder'] = t('Username or Email');
+  $form['pass']['#placeholder'] = t('Password');
+}
+
+// Placeholder text for Password reset input form
+function artpro_form_user_pass_alter(&$form, $form_state) {
+  $form['mergevars[FNAME]']['#placeholder'] = t('Username or Email');
+//  $form['pass']['#placeholder'] = t('Password');
+}
+
+// Placeholder text for Mailchimp signup
+function artpro_form_mailchimp_signup_subscribe_block_newsletter_signup_form_alter(&$form, $form_state) {
+//  $form['pass']['#placeholder'] = t('Password');
+	add_placeholders($form);
+}
+
+// Globally apply add placeholders function to all form inputs
+//function artpro_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//  add_placeholders($form);
+//}
+
+
+/**
+ * Add placeholders to suitable form elements -> textfield, password, email, textarea
+ */
+function add_placeholders(&$element) {
+  if(isset($element['#type']) && in_array($element['#type'], ['textfield', 'password', 'email', 'textarea'])) {
+    $element['#attributes']['placeholder'] = $element['#title'];
+  }
+  foreach(\Drupal\Core\Render\Element::children($element) as $key) {
+    add_placeholders($element[$key]);
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function artpro_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+}
+
+
+/**
+  * Set node or taxonomy id as body class
+  */
+function artpro_preprocess_html(&$variables) {
+ // if ($node = \Drupal::request()->attributes->get('node')) {
+   // $variables['attributes']['class'][] = 'page-node-' . $node->id();
+ // }
+  
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+  }
+  
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    // load the term entity and get the data from there
+    $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+//    $variables['term_id'] = $term->id();
+    $variables['term_id'] = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+    $variables['vocabulary_id'] = $term->bundle();
+
+  }
+  
+}
+
+
+/*
+function artpro_form_mailchimp_signup_subscribe_block_newsletter_signup_alter(&$form, $form_state) {
+  $form['mergevars']['FNAME']['#placeholder'] = t('Username or Email');
+  $form['mergevars']['FNAME']['#attributes'] = array(
+  'placeholder'=> t('Your placeholder'));
+  $form['pass']['#placeholder'] = t('Password');
+  $form['mergevars']['EMAIL']['#placeholder'] = t('Your emailaddress');
+  
+    if ($form_id == 'mailchimp-signup-subscribe-block-newsletter-signup') {
+    //dpm($form);
+    unset( $form['mergevars']['EMAIL']['#title']);
+    $form['mergevars']['EMAIL']['#placeholder'] = t('Your emailaddress');
+    dpm($form['mergevars']['EMAIL']['#placeholder']);
+    
+    $key_blacklist = array('#prefix','#suffix','#tree');
+
+foreach($form['mergevars'] as $key => $var) {
+  if ( ! in_array($key, $key_blacklist)) {
+    $form['mergevars'][$key]['#attributes'] = array( 'placeholder'=> $form['mergevars'][$key]['#title']);
+  }
+};
+$form['mergevars']['EMAIL']['#attributes'] = array(
+ 'placeholder'=> t('Your placeholder'),
+);
+    }
+}
+*/
+
+function artpro_preprocess_node(&$vars) {
+  $node = $vars['node'];
+  $type = $node->getType();
+  if( $type == "resource" && $node->hasField('field_file')){
+      //next gets FieldItemList
+      //$file = $node->get('field_file');  
+
+      //you need get the file entity
+      $file = $node->get('field_file')->entity;
+      $vars["size"] = $file->getSize();
+      $vars["type"] = $file->getMimeType();
+	  //$vars["path"] = $file->getUrl();
+	  //$file = File::load($file_id);
+	  $uri = $file->getFileUri();
+	$stream_wrapper_manager = \Drupal::service('stream_wrapper_manager')->getViaUri($uri);
+	$file_path = $stream_wrapper_manager->realpath();
+
+  };
+  
+/*
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $variables['user_name'] = $node->getOwner()->field_name->value;
+  $variables['user_picture'] = $node->getOwner()->user_picture->value;
+*/
+}
+
+
+/*
+function artpro_preprocess_node(&$variables){
+  }
+*/
+
+// Add access to view mode templates for users.
+function artpro_theme_suggestions_user_alter(&$suggestions, $vars, $hook) {
+
+  // Define the view mode.
+  $mode = $vars['elements']['#view_mode'];
+
+  // Create a theme hook suggestion which has the view mode name in it.
+  $suggestions[] = 'user__' . $mode;
+}
+
+
+/**
+ * @file
+ * Functions to support theming in the Tofacile theme.
+ */
+
+
+function artpro_preprocess_file_link(&$variables){
+  $file = $variables['file'];
+  $options = [];
+  $file_entity = $file instanceof File ? $file : File::load($file->fid);
+
+  // @todo Wrap in file_url_transform_relative(). This is currently
+  // impossible. As a work-around, we currently add the 'url.site' cache context
+  // to ensure different file URLs are generated for different sites in a
+  // multisite setup, including HTTP and HTTPS versions of the same site.
+  // Fix in https://www.drupal.org/node/2646744.
+  $url = file_create_url($file_entity
+    ->getFileUri());
+  $variables['#cache']['contexts'][] = 'url.site';
+  $mime_type = $file
+    ->getMimeType();
+
+  // Set options as per anchor format described at
+  // http://microformats.org/wiki/file-format-examples
+  $options['attributes']['type'] = $mime_type . '; length=' . $file
+      ->getSize();
+
+  // Use the description as the link text if available.
+  if (empty($variables['description'])) {
+    $link_text = $file_entity
+      ->getFilename();
+  }
+  else {
+    $link_text = $variables['description'];
+    $options['attributes']['title'] = $file_entity
+      ->getFilename();
+  }
+
+  // Classes to add to the file field for icons.
+  $classes = [
+    'file',
+    // Add a specific class for each and every mime type.
+    'file--mime-' . strtr($mime_type, [
+      '/' => '-',
+      '.' => '-',
+    ]),
+    // Add a more general class for groups of well known MIME types.
+    'file--' . file_icon_class($mime_type),
+  ];
+
+  // Set file classes to the options array.
+  $variables['attributes'] = new Attribute($variables['attributes']);
+  $variables['attributes']
+    ->addClass($classes);
+  $variables['link'] = \Drupal::l($link_text, Url::fromUri($url, $options));
+}
