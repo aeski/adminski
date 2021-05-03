@@ -1,0 +1,29 @@
+uuid: fa950ae8-2a80-439c-8d28-5d8ba969b26e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_partner_reference
+    - media.type.image
+    - taxonomy.vocabulary.partners
+id: media.image.field_partner_reference
+field_name: field_partner_reference
+entity_type: media
+bundle: image
+label: 'Partner Reference'
+description: 'Categorise this image with a partner to help find it in the future.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partners: partners
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

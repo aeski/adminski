@@ -1,0 +1,22 @@
+uuid: fe39cf09-366b-40b3-b02d-ade6f1d3c8a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: case_studies
+label: Projects
+type: 'canonical_entities:node'
+pattern: '/projects/[node:title]'
+selection_criteria:
+  6fce4e4a-c918-410b-aa63-96a9c445d17b:
+    id: node_type
+    bundles:
+      case_study: case_study
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6fce4e4a-c918-410b-aa63-96a9c445d17b
+selection_logic: and
+weight: -5
+relationships: {  }

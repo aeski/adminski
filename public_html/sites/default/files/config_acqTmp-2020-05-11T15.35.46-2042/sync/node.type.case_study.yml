@@ -1,0 +1,18 @@
+uuid: 6f17c0f6-ac1d-42f8-8eb8-ce81b5ca19f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Project
+type: case_study
+description: 'Content Type for Case Studies.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

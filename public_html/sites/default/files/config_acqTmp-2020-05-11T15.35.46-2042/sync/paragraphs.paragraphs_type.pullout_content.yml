@@ -1,0 +1,10 @@
+uuid: e4f5eb69-9c7b-486d-bd07-b765baf786a2
+langcode: en
+status: true
+dependencies: {  }
+id: pullout_content
+label: 'Pullout content'
+icon_uuid: null
+icon_default: null
+description: 'Pullout content such as a quote or piece of information to be separated from the main content. Uses a background image and text.'
+behavior_plugins: {  }

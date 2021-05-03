@@ -1,0 +1,31 @@
+uuid: 93e2d906-80b8-42cb-8930-d60ebbffb2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.node_title
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: views_block__node_title_block_1
+theme: artpro
+region: content_header
+weight: -10
+provider: null
+plugin: 'views_block:node_title-block_1'
+settings:
+  id: 'views_block:node_title-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/node/5"
+    negate: true
+    context_mapping: {  }

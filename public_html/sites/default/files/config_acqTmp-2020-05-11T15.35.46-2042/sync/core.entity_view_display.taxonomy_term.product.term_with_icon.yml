@@ -1,0 +1,34 @@
+uuid: bfcc33de-adda-4638-b0d3-3d7160183e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.term_with_icon
+    - field.field.taxonomy_term.product.field_body
+    - field.field.taxonomy_term.product.field_distinct
+    - field.field.taxonomy_term.product.field_feature_image
+    - field.field.taxonomy_term.product.field_icon
+    - field.field.taxonomy_term.product.field_sections
+    - field.field.taxonomy_term.product.field_subtitle
+    - taxonomy.vocabulary.product
+id: taxonomy_term.product.term_with_icon
+targetEntityType: taxonomy_term
+bundle: product
+mode: term_with_icon
+content:
+  field_icon:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: svg
+      link: false
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_body: true
+  field_distinct: true
+  field_feature_image: true
+  field_sections: true
+  field_subtitle: true

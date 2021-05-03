@@ -1,0 +1,20 @@
+uuid: 362637ae-8d3a-45c4-aa7f-2d6777b8e05f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: media.field_partner_reference
+field_name: field_partner_reference
+entity_type: media
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

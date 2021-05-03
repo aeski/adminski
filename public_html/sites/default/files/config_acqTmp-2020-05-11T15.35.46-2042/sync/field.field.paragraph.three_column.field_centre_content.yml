@@ -1,0 +1,21 @@
+uuid: eb78ab80-fe55-40c9-8094-8aac08f4a89b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_centre_content
+    - paragraphs.paragraphs_type.three_column
+  module:
+    - text
+id: paragraph.three_column.field_centre_content
+field_name: field_centre_content
+entity_type: paragraph
+bundle: three_column
+label: 'Centre Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

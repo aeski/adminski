@@ -1,0 +1,47 @@
+uuid: 32a2194c-4591-4fd4-b271-d6bb30cf1ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_text_long
+  module:
+    - ckeditor
+format: basic_text_long
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Superscript
+            - Subscript
+            - HorizontalRule
+        -
+          name: Links
+          items:
+            - DrupalUnlink
+            - DrupalLink
+        -
+          name: Tools
+          items:
+            - Source
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: node
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

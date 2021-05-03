@@ -1,0 +1,31 @@
+uuid: 51edd45b-dc13-4b78-b27e-2fcac212f310
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.node_title
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: ap_custom_project_title
+theme: artpro
+region: content_header
+weight: -8
+provider: null
+plugin: 'views_block:node_title-block_2'
+settings:
+  id: 'views_block:node_title-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /projects
+    negate: false
+    context_mapping: {  }

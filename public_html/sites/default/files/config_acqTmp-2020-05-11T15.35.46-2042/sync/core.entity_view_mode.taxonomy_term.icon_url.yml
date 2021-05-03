@@ -1,0 +1,10 @@
+uuid: 48ebfbe6-6538-4d54-b6dc-dac98bf2f79e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.icon_url
+label: 'Icon URL'
+targetEntityType: taxonomy_term
+cache: true

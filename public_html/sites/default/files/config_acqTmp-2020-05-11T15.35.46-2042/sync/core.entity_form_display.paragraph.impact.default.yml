@@ -1,0 +1,49 @@
+uuid: 7b27146d-bdbd-452d-baf9-ed17ad0e9c9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.impact.field_icon
+    - field.field.paragraph.impact.field_metric
+    - field.field.paragraph.impact.field_number
+    - field.field.paragraph.impact.field_unit
+    - paragraphs.paragraphs_type.impact
+  module:
+    - icon_select
+id: paragraph.impact.default
+targetEntityType: paragraph
+bundle: impact
+mode: default
+content:
+  field_icon:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: icon_select_widget_default
+    region: content
+  field_metric:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_number:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_unit:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

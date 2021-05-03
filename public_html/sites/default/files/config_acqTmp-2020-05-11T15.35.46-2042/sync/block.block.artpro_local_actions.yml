@@ -1,0 +1,20 @@
+uuid: da64b4c9-d0b9-41ae-8d4a-daf3160418bd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - artpro
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: artpro_local_actions
+theme: artpro
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

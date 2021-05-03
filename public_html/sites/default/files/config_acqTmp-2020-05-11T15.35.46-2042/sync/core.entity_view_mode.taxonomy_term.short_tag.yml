@@ -1,0 +1,10 @@
+uuid: 1fda8c29-21d2-4358-98d3-4eebf1eeb6f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.short_tag
+label: 'Short Tag'
+targetEntityType: taxonomy_term
+cache: true

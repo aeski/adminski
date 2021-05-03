@@ -1,0 +1,30 @@
+uuid: d01a6857-10e0-460c-a298-5c676a9c2516
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_content
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: featured_project
+theme: artpro
+region: content_bottom
+weight: -9
+provider: null
+plugin: 'views_block:latest_content-block_2'
+settings:
+  id: 'views_block:latest_content-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

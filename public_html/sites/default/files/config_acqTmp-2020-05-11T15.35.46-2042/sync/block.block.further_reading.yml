@@ -1,0 +1,33 @@
+uuid: 3f1a97c2-503f-4f9f-a08c-95cd993c2e5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.related_content
+  module:
+    - node
+    - views
+  theme:
+    - artpro
+id: further_reading
+theme: artpro
+region: content_bottom
+weight: -11
+provider: null
+plugin: 'views_block:related_content-block_1'
+settings:
+  id: 'views_block:related_content-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      case_study: case_study
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

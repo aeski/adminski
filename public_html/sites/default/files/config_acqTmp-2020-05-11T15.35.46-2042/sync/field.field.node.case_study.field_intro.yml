@@ -1,0 +1,21 @@
+uuid: 477a2e71-794a-4798-a2fa-206f661d2afb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_intro
+field_name: field_intro
+entity_type: node
+bundle: case_study
+label: intro
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

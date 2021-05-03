@@ -1,0 +1,15 @@
+uuid: 3e592e7c-7134-431b-8ee5-a0ad33bd4a6d
+langcode: en
+status: true
+dependencies: {  }
+name: twitter_image
+label: 'Twitter Image'
+effects:
+  e3e2ffe0-0f26-429b-af78-19889ec293ae:
+    uuid: e3e2ffe0-0f26-429b-af78-19889ec293ae
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 880
+      height: 440
+      anchor: center-center

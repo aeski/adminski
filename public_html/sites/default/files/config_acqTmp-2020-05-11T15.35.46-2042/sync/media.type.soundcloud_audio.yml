@@ -1,0 +1,20 @@
+uuid: 8356c0fd-a0e2-4a49-8f6b-025f0ccc98ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_soundcloud
+third_party_settings:
+  crop:
+    image_field: null
+id: soundcloud_audio
+label: 'Soundcloud Audio'
+description: ''
+source: soundcloud
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_soundcloud
+field_map:
+  html: field_media_soundcloud

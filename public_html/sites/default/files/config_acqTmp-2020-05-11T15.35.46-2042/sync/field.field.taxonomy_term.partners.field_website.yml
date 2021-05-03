@@ -1,0 +1,23 @@
+uuid: f082cc2c-0e62-4309-bf65-98b0d8e20dac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_website
+    - taxonomy.vocabulary.partners
+  module:
+    - link
+id: taxonomy_term.partners.field_website
+field_name: field_website
+entity_type: taxonomy_term
+bundle: partners
+label: website
+description: 'URL of Partner''s website'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

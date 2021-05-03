@@ -1,0 +1,32 @@
+uuid: 81cb0745-5256-4e6e-86d1-76f8a13aecd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.case_study
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: full_html
+    basic_text_long: '0'
+    basic_text_short: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.case_study.body
+field_name: body
+entity_type: node
+bundle: case_study
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,62 @@
+uuid: b8bd7dd0-66c8-46eb-a6b7-67c6adfb8b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case_study.body
+    - field.field.node.case_study.field_address
+    - field.field.node.case_study.field_approach
+    - field.field.node.case_study.field_body_old
+    - field.field.node.case_study.field_breakout
+    - field.field.node.case_study.field_challenge
+    - field.field.node.case_study.field_deliverables
+    - field.field.node.case_study.field_feature_audio
+    - field.field.node.case_study.field_feature_image
+    - field.field.node.case_study.field_impact
+    - field.field.node.case_study.field_intro
+    - field.field.node.case_study.field_partner
+    - field.field.node.case_study.field_pullout
+    - field.field.node.case_study.field_solution
+    - field.field.node.case_study.field_subtitle
+    - field.field.node.case_study.field_summary
+    - field.field.node.case_study.field_tag
+    - node.type.case_study
+  module:
+    - text
+    - user
+id: node.case_study.teaser
+targetEntityType: node
+bundle: case_study
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address: true
+  field_approach: true
+  field_body_old: true
+  field_breakout: true
+  field_challenge: true
+  field_deliverables: true
+  field_feature_audio: true
+  field_feature_image: true
+  field_impact: true
+  field_intro: true
+  field_partner: true
+  field_pullout: true
+  field_solution: true
+  field_subtitle: true
+  field_summary: true
+  field_tag: true

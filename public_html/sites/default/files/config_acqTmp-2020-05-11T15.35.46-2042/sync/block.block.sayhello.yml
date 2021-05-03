@@ -1,0 +1,25 @@
+uuid: 65c790b2-fa8b-4c69-b9eb-a8b39a788a73
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:946f07f1-69e6-492e-8ebf-866c8a27846a'
+  module:
+    - block_content
+  theme:
+    - artpro
+id: sayhello
+theme: artpro
+region: footer
+weight: -10
+provider: null
+plugin: 'block_content:946f07f1-69e6-492e-8ebf-866c8a27846a'
+settings:
+  id: 'block_content:946f07f1-69e6-492e-8ebf-866c8a27846a'
+  label: 'Say Hello'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

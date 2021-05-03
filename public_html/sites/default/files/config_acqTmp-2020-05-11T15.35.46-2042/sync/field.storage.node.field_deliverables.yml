@@ -1,0 +1,19 @@
+uuid: e85e1b3b-e39c-4fdb-bc22-7aa344ece398
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_deliverables
+field_name: field_deliverables
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

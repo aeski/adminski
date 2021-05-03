@@ -1,0 +1,37 @@
+uuid: 0521699c-bad4-4cc5-9ac9-3b1ddca9599d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact
+    - node.type.case_study
+    - paragraphs.paragraphs_type.impact
+  module:
+    - entity_reference_revisions
+id: node.case_study.field_impact
+field_name: field_impact
+entity_type: node
+bundle: case_study
+label: Impact
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      impact: impact
+    target_bundles_drag_drop:
+      free_form:
+        weight: 4
+        enabled: false
+      impact:
+        enabled: true
+        weight: 5
+      three_column:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,35 @@
+uuid: dbfa7b93-6ad2-4f8e-a397-c356ace8269f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node
+label: node
+description: ''
+matchers:
+  5ed383a8-4ac1-4679-9212-0b6ddeb14f7b:
+    uuid: 5ed383a8-4ac1-4679-9212-0b6ddeb14f7b
+    id: 'entity:node'
+    weight: 0
+    settings:
+      bundles:
+        article: article
+        case_study: case_study
+        page: page
+      group_by_bundle: true
+      include_unpublished: false
+      substitution_type: canonical
+      metadata: '[node:content-type]'
+  df328859-2723-4e87-a76a-2ecff7332525:
+    uuid: df328859-2723-4e87-a76a-2ecff7332525
+    id: 'entity:taxonomy_term'
+    weight: 0
+    settings:
+      bundles:
+        partners: partners
+        product: product
+      group_by_bundle: true
+      substitution_type: canonical
+      metadata: ''

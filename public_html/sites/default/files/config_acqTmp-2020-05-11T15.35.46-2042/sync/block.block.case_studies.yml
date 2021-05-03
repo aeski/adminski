@@ -1,0 +1,30 @@
+uuid: 2cb07002-1bdf-49ea-a8ce-c5e30c5f7a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.case_studies
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: case_studies
+theme: artpro
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:case_studies-block_1'
+settings:
+  id: 'views_block:case_studies-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/22
+    negate: false
+    context_mapping: {  }

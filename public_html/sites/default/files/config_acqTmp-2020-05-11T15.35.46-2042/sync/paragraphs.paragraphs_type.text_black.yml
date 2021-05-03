@@ -1,0 +1,10 @@
+uuid: 553a308b-dfb8-4499-b90f-d0d50db4c5d0
+langcode: en
+status: true
+dependencies: {  }
+id: text_black
+label: 'Free Text black'
+icon_uuid: null
+icon_default: null
+description: 'Free textarea section on full width black background'
+behavior_plugins: {  }

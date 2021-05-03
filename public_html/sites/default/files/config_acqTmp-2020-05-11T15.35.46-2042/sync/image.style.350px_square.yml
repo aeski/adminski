@@ -1,0 +1,25 @@
+uuid: fb8f19da-3a87-411b-a42c-97878e5e0c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.staff_profile
+  module:
+    - crop
+name: 350px_square
+label: '350px square'
+effects:
+  48b7878b-e092-4305-acbc-f168342286a5:
+    uuid: 48b7878b-e092-4305-acbc-f168342286a5
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: staff_profile
+  25326afa-90ed-431e-a1e9-c66ae27e6e77:
+    uuid: 25326afa-90ed-431e-a1e9-c66ae27e6e77
+    id: image_scale
+    weight: 2
+    data:
+      width: 350
+      height: 350
+      upscale: false

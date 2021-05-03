@@ -1,0 +1,30 @@
+uuid: b3960bd4-b2bf-44b9-ab77-0d6127ba3aac
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.staff
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: our_people
+theme: artpro
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:staff-block_1'
+settings:
+  id: 'views_block:staff-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/7
+    negate: false
+    context_mapping: {  }

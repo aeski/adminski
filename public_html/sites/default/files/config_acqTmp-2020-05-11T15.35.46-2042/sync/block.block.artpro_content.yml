@@ -1,0 +1,22 @@
+uuid: 246f2dca-6ca3-4c90-b327-498d15760a88
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - artpro
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: artpro_content
+theme: artpro
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

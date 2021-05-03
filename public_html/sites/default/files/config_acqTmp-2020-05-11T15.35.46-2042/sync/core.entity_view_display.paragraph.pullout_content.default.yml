@@ -1,0 +1,32 @@
+uuid: fab4bb8f-09d6-4223-a89f-80d40196e462
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pullout_content.field_body
+    - field.field.paragraph.pullout_content.field_image
+    - paragraphs.paragraphs_type.pullout_content
+  module:
+    - text
+id: paragraph.pullout_content.default
+targetEntityType: paragraph
+bundle: pullout_content
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: featured
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

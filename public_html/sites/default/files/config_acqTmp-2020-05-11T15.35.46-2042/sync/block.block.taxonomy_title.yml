@@ -1,0 +1,31 @@
+uuid: 435a9f67-dfad-4d6d-b2b6-d0ca577b9f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_title
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: taxonomy_title
+theme: artpro
+region: content_header
+weight: -9
+provider: null
+plugin: 'views_block:taxonomy_title-block_1'
+settings:
+  id: 'views_block:taxonomy_title-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/taxonomy/term/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,43 @@
+uuid: 7c03ee34-f5b3-44fc-97e2-ceafbc33881d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_column.field_centre_content
+    - field.field.paragraph.three_column.field_left_content
+    - field.field.paragraph.three_column.field_right_content
+    - paragraphs.paragraphs_type.three_column
+  module:
+    - text
+id: paragraph.three_column.default
+targetEntityType: paragraph
+bundle: three_column
+mode: default
+content:
+  field_centre_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_left_content:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_right_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

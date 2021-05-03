@@ -1,0 +1,8 @@
+uuid: 67310aa7-65ed-4c40-80d8-ca69098f9dda
+langcode: en
+status: true
+dependencies: {  }
+name: Region
+vid: region
+description: 'Regions for use on Partner Taxonomy terms'
+weight: 0

@@ -1,0 +1,30 @@
+uuid: a9d68bf5-38e1-4827-87cb-b3c43eb136e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_content
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: news
+theme: artpro
+region: content_bottom
+weight: -8
+provider: null
+plugin: 'views_block:latest_content-block_3'
+settings:
+  id: 'views_block:latest_content-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

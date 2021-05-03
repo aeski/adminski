@@ -1,0 +1,27 @@
+uuid: 45846ea7-950b-4bc3-b8e9-3791c52a0e83
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - artpro
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: artpro_page_title
+theme: artpro
+region: content_header
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/*\r\n/taxonomy/term/*\r\n/projects"
+    negate: true
+    context_mapping: {  }

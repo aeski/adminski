@@ -1,0 +1,20 @@
+uuid: 44ce846d-082d-4a26-aebb-60bf159a8fd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+    - weight
+id: user.field_order
+field_name: field_order
+entity_type: user
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

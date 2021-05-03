@@ -1,0 +1,10 @@
+uuid: 2923abf6-ce16-47a7-9b6c-169430ce0a0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.project_view
+label: 'Project View'
+targetEntityType: taxonomy_term
+cache: true

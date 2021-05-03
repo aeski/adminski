@@ -1,0 +1,23 @@
+uuid: 24d56780-62d7-4741-ba4f-771c646b6ca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number
+    - paragraphs.paragraphs_type.impact
+id: paragraph.impact.field_number
+field_name: field_number
+entity_type: paragraph
+bundle: impact
+label: Number
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

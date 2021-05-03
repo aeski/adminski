@@ -1,0 +1,19 @@
+uuid: aa802b76-c1d3-48d2-adb9-a15e4d42aed4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'reorder terms in product'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view terms in product'

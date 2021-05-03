@@ -1,0 +1,43 @@
+uuid: b39d927a-195c-4710-8dc4-1d88cff1f4a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - obfuscate_email
+name: 'Basic Text Short'
+format: basic_text_short
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <i> <strong> <em>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  obfuscate_email:
+    id: obfuscate_email
+    provider: obfuscate_email
+    status: false
+    weight: 0
+    settings:
+      click: '0'
+      click_label: 'Click here to show mail address'

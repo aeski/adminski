@@ -1,0 +1,30 @@
+uuid: 9fd35853-193d-40c0-b3b4-c8b753ea7ef6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_old
+    - node.type.case_study
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    basic_text_long: '0'
+    basic_text_short: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.case_study.field_body_old
+field_name: field_body_old
+entity_type: node
+bundle: case_study
+label: 'Overflow Body'
+description: 'For migrating older content, excess body content can go here and will appear below the project highlights'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

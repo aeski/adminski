@@ -1,0 +1,10 @@
+uuid: 4f55cb65-4c31-4e19-840c-dea54bafb2a2
+langcode: en
+status: true
+dependencies: {  }
+id: impact
+label: Impact
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: 4f260005-d9b9-4d3d-9a47-6309989b3d30
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - artpro
+id: mainnavigation
+theme: artpro
+region: footer
+weight: -9
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main Navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

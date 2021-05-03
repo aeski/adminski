@@ -1,0 +1,33 @@
+uuid: 89a86c69-c9a4-4735-a832-b53a16fad227
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_type
+field_name: field_type
+entity_type: media
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 0
+      label: Photo
+    -
+      value: !!float 1
+      label: Logo
+    -
+      value: !!float 2
+      label: Icon
+    -
+      value: !!float 3
+      label: Render
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

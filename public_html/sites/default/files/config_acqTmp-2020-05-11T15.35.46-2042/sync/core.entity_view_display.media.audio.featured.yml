@@ -1,0 +1,29 @@
+uuid: 5b28c552-0aba-4cd7-96ee-9598edf1ae2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.featured
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - file
+_core:
+  default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
+id: media.audio.featured
+targetEntityType: media
+bundle: audio
+mode: featured
+content:
+  field_media_audio_file:
+    type: file_url_plain
+    weight: 0
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

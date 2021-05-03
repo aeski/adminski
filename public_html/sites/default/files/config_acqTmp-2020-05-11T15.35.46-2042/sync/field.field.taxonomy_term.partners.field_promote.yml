@@ -1,0 +1,23 @@
+uuid: 5e79eb37-70db-4489-9360-b51589476cf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_promote
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners.field_promote
+field_name: field_promote
+entity_type: taxonomy_term
+bundle: partners
+label: 'Promote to Logo farm'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

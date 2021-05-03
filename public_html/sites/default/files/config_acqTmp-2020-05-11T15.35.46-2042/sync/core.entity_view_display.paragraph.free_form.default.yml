@@ -1,0 +1,22 @@
+uuid: b4b7220c-4734-429d-8754-e44c36634d9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.free_form.field_body
+    - paragraphs.paragraphs_type.free_form
+  module:
+    - text
+id: paragraph.free_form.default
+targetEntityType: paragraph
+bundle: free_form
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,30 @@
+uuid: e3050b9a-dc73-4361-a14b-a927646d69b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approach
+    - node.type.case_study
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_text_long: basic_text_long
+    basic_html: '0'
+    basic_text_short: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.case_study.field_approach
+field_name: field_approach
+entity_type: node
+bundle: case_study
+label: Approach
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: 715d6f9a-4601-4ec6-920d-57a103f66056
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_distinct
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners.field_distinct
+field_name: field_distinct
+entity_type: taxonomy_term
+bundle: partners
+label: Distinct
+description: 'Should references to this taxonomy term link to its own page?'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

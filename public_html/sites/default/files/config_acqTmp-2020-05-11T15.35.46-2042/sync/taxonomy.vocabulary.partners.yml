@@ -1,0 +1,8 @@
+uuid: 5976745b-337a-4486-8212-235b72355e76
+langcode: en
+status: true
+dependencies: {  }
+name: Partners
+vid: partners
+description: 'Project partners, associated with content such as case studies'
+weight: 0

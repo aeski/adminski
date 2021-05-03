@@ -1,0 +1,27 @@
+uuid: bcdb99b4-3936-4f29-9f19-75900f17c3f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.icons.field_svg_file
+    - field.field.taxonomy_term.icons.field_symbol_id
+    - taxonomy.vocabulary.icons
+  module:
+    - file
+_core:
+  default_config_hash: UUwvJN32DfkPEMyhX9Ey38vdaQbr20x0Sc8fnGBHlyc
+id: taxonomy_term.icons.default
+targetEntityType: taxonomy_term
+bundle: icons
+mode: default
+content:
+  field_svg_file:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+hidden:
+  description: true
+  field_symbol_id: true

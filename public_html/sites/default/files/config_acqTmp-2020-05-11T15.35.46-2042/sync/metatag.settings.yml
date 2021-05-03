@@ -1,0 +1,13 @@
+entity_type_groups:
+  node:
+    case_study:
+      basic: basic
+      open_graph: open_graph
+      facebook: facebook
+      twitter_cards: twitter_cards
+      google_cse: google_cse
+    page:
+      basic: basic
+      advanced: advanced
+      facebook: facebook
+      google_cse: google_cse

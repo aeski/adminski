@@ -1,0 +1,8 @@
+uuid: 47dd8153-5379-4073-ab56-8eb1f599e666
+langcode: en
+status: true
+dependencies: {  }
+name: Team
+vid: team
+description: ''
+weight: 0

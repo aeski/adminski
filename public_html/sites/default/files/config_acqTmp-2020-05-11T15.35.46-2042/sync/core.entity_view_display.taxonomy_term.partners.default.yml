@@ -1,0 +1,35 @@
+uuid: b2c6e491-dd5a-48b8-865c-5a01fbfbef9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.partners.field_distinct
+    - field.field.taxonomy_term.partners.field_logo
+    - field.field.taxonomy_term.partners.field_partner_logo
+    - field.field.taxonomy_term.partners.field_promote
+    - field.field.taxonomy_term.partners.field_region
+    - field.field.taxonomy_term.partners.field_sector
+    - field.field.taxonomy_term.partners.field_website
+    - taxonomy.vocabulary.partners
+  module:
+    - text
+id: taxonomy_term.partners.default
+targetEntityType: taxonomy_term
+bundle: partners
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_distinct: true
+  field_logo: true
+  field_partner_logo: true
+  field_promote: true
+  field_region: true
+  field_sector: true
+  field_website: true

@@ -1,0 +1,26 @@
+uuid: 8436e184-2240-4790-9dd8-6fea8f974396
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+    - system
+  theme:
+    - artpro
+id: mailchimpsubscriptionformnewslettersignup
+theme: artpro
+region: newsletter_signup
+weight: -11
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:newsletter_signup'
+settings:
+  id: 'mailchimp_signup_subscribe_block:newsletter_signup'
+  label: 'Mailchimp Subscription Form: Newsletter Signup'
+  provider: mailchimp_signup
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,63 @@
+uuid: 4c498f7e-1bfb-4deb-9b0c-2830b2009870
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
+format: basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Superscript
+            - RemoveFormat
+            - Blockquote
+            - HorizontalRule
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - DrupalMediaLibrary
+        -
+          name: Styles
+          items:
+            - Styles
+        -
+          name: Tools
+          items:
+            - Source
+  plugins:
+    stylescombo:
+      styles: "q|Inline Quote\r\nq.pullout|Pullout Quote\r\np|Normal\r\np.quotee|Quotee\r\np.h2|Faux H2\r\nh2.page-subtitle|Heading H1\r\nh2|Heading H2\r\nh3|Heading H3\r\nh4|Heading H4\r\nh5|Heading H5\r\na.button|Button Style Link"
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: node
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

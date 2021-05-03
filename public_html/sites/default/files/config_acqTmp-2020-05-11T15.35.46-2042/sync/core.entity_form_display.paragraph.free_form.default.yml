@@ -1,0 +1,25 @@
+uuid: 9fab9689-f6ed-448f-af4f-5b90d27d08ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.free_form.field_body
+    - paragraphs.paragraphs_type.free_form
+  module:
+    - text
+id: paragraph.free_form.default
+targetEntityType: paragraph
+bundle: free_form
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,28 @@
+uuid: ee240b6c-8a02-401a-a172-ecb8eebd091e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_audio
+    - media.type.audio
+    - node.type.case_study
+id: node.case_study.field_feature_audio
+field_name: field_feature_audio
+entity_type: node
+bundle: case_study
+label: 'Feature Audio'
+description: 'Featured audio for this content, will be available to play in the header of this page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

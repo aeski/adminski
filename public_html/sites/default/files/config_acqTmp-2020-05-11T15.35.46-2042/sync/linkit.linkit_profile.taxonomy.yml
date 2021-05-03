@@ -1,0 +1,21 @@
+uuid: 51b6e638-3054-4279-8206-38fd69b52c67
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy
+label: taxonomy
+description: 'Links to taxonomy terms such as topics '
+matchers:
+  8c863da2-cf4b-42a5-afc4-c584ce40adc8:
+    uuid: 8c863da2-cf4b-42a5-afc4-c584ce40adc8
+    id: 'entity:taxonomy_term'
+    weight: 0
+    settings:
+      bundles:
+        partners: partners
+        product: product
+      group_by_bundle: true
+      substitution_type: canonical
+      metadata: Taxonomy

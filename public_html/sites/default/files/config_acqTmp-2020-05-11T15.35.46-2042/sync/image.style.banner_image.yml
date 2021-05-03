@@ -1,0 +1,33 @@
+uuid: 7352b774-d74b-40bb-9dad-694b0aa636c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.banner_4_1
+  module:
+    - crop
+name: banner_image
+label: 'Banner Image'
+effects:
+  976feb18-eff5-47b6-b41a-ff38227854e2:
+    uuid: 976feb18-eff5-47b6-b41a-ff38227854e2
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: banner_4_1
+  cc429380-4b42-4b62-8a7d-1f718150c1fd:
+    uuid: cc429380-4b42-4b62-8a7d-1f718150c1fd
+    id: image_scale
+    weight: 2
+    data:
+      width: 1600
+      height: null
+      upscale: false
+  535f396a-5167-4aff-b9e6-c2d865d5a030:
+    uuid: 535f396a-5167-4aff-b9e6-c2d865d5a030
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 1600
+      height: 400
+      anchor: center-center

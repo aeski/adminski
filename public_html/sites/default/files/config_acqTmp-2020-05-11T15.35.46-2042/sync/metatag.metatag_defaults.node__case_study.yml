@@ -1,0 +1,16 @@
+uuid: 84ce5c2f-d407-49a9-a0a9-c697c2742b89
+langcode: en
+status: true
+dependencies: {  }
+id: node__case_study
+label: 'Content: Project'
+tags:
+  thumbnail: '[node:field_feature_image:entity:field_media_image:medium]'
+  og_type: Project
+  og_image: '[node:field_feature_image:entity:field_media_image:facebook_image]'
+  og_image_alt: '[node:field_feature_image:entity:field_media_image:alt]'
+  twitter_cards_creator: '@ArtProcessors'
+  twitter_cards_image: '[node:field_feature_image:entity:field_media_image:twitter_image]'
+  twitter_cards_site: '@ArtProcessors'
+  twitter_cards_image_alt: '[node:field_feature_image:entity:field_media_image:alt]'
+  twitter_cards_type: summary_large_image

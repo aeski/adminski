@@ -1,0 +1,28 @@
+uuid: 9919f0fe-254e-40a3-9190-e2593259ad6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_image
+    - media.type.image
+    - node.type.case_study
+id: node.case_study.field_feature_image
+field_name: field_feature_image
+entity_type: node
+bundle: case_study
+label: 'Feature Image'
+description: 'Feature Image for this content, will be displayed in the header of this page (unless feature video is also set) and on teaser content for this page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

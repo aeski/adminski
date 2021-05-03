@@ -1,0 +1,12 @@
+uuid: d57b3e07-52b8-44df-8488-3cd3b1a24ac3
+langcode: en
+status: true
+dependencies: {  }
+id: staff_profile
+label: 'Staff Profile'
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: 360
+soft_limit_height: 360
+hard_limit_width: 360
+hard_limit_height: 360

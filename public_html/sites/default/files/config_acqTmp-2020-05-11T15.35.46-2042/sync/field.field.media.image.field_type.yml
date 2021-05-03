@@ -1,0 +1,23 @@
+uuid: abce4047-b525-4d4a-90a3-1ffdf172c356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_type
+    - media.type.image
+  module:
+    - options
+id: media.image.field_type
+field_name: field_type
+entity_type: media
+bundle: image
+label: Type
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_float

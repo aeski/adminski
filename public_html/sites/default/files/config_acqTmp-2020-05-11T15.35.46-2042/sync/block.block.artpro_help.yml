@@ -1,0 +1,22 @@
+uuid: f4312406-c19a-4e59-8572-3091a626e3e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - artpro
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: artpro_help
+theme: artpro
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

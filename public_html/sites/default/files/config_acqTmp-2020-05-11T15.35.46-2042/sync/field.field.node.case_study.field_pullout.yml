@@ -1,0 +1,40 @@
+uuid: 0b50a2f6-13f3-470f-9844-7a5e2fa40643
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pullout
+    - node.type.case_study
+    - paragraphs.paragraphs_type.pullout_content
+  module:
+    - entity_reference_revisions
+id: node.case_study.field_pullout
+field_name: field_pullout
+entity_type: node
+bundle: case_study
+label: Pullout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      pullout_content: pullout_content
+    target_bundles_drag_drop:
+      free_form:
+        weight: 5
+        enabled: false
+      impact:
+        weight: 6
+        enabled: false
+      pullout_content:
+        enabled: true
+        weight: 7
+      three_column:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

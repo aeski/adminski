@@ -1,0 +1,23 @@
+uuid: 0cb6c609-ea1d-4912-945a-ff22cc08f361
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breakout
+    - node.type.case_study
+  module:
+    - text
+id: node.case_study.field_breakout
+field_name: field_breakout
+entity_type: node
+bundle: case_study
+label: 'Breakout Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

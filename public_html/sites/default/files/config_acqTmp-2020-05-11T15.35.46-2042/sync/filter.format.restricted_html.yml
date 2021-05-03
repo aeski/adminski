@@ -1,0 +1,45 @@
+uuid: ed5e0766-adc2-4653-9931-642b61425b13
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - obfuscate_email
+_core:
+  default_config_hash: oz6NyPDAB4HB6N9hgH2LwNVtCd-sXbMG1fbn5KsRIDI
+name: 'Restricted HTML'
+format: restricted_html
+weight: 1
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <b> <i>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  obfuscate_email:
+    id: obfuscate_email
+    provider: obfuscate_email
+    status: false
+    weight: 0
+    settings:
+      click: '0'
+      click_label: 'Click here to show mail address'

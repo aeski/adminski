@@ -1,0 +1,31 @@
+uuid: fa2c71f3-ac1d-4816-8fcf-1af3d4c40d3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.node_title
+  module:
+    - system
+    - views
+  theme:
+    - artpro
+id: homepage_banner
+theme: artpro
+region: content_header
+weight: 0
+provider: null
+plugin: 'views_block:node_title-block_3'
+settings:
+  id: 'views_block:node_title-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

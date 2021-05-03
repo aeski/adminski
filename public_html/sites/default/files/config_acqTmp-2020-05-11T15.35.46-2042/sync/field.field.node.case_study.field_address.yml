@@ -1,0 +1,47 @@
+uuid: 67a8af6b-899c-4bec-8985-0ae738a8419c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.case_study
+  module:
+    - address
+id: node.case_study.field_address
+field_name: field_address
+entity_type: node
+bundle: case_study
+label: Location
+description: 'Address of this case study, this is used for filtering purposes.'
+required: false
+translatable: false
+default_value:
+  -
+    langcode: ''
+    country_code: AU
+    administrative_area: ''
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+  fields: {  }
+field_type: address

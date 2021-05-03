@@ -1,0 +1,19 @@
+uuid: a676a6ee-9599-497a-83df-7b936d797c72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_metric
+    - paragraphs.paragraphs_type.impact
+id: paragraph.impact.field_metric
+field_name: field_metric
+entity_type: paragraph
+bundle: impact
+label: Metric
+description: 'What is the Metric this number represents, e.g. "Sessions recorded during opening weekend"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

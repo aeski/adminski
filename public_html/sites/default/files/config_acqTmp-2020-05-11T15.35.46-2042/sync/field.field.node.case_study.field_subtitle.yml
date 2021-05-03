@@ -1,0 +1,30 @@
+uuid: 3d655880-f2fa-46a2-9077-e9b89447cefa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.case_study
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_text_short: basic_text_short
+    basic_html: '0'
+    basic_text_long: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.case_study.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: case_study
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

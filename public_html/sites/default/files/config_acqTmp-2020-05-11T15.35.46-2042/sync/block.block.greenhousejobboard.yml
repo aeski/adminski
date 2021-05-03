@@ -1,0 +1,31 @@
+uuid: 791fc581-86e9-48ba-9d9a-eb9a778a17f1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:58b8519c-f6c8-4836-aa4b-693ff4248ce8'
+  module:
+    - block_content
+    - system
+  theme:
+    - artpro
+id: greenhousejobboard
+theme: artpro
+region: content_bottom
+weight: -10
+provider: null
+plugin: 'block_content:58b8519c-f6c8-4836-aa4b-693ff4248ce8'
+settings:
+  id: 'block_content:58b8519c-f6c8-4836-aa4b-693ff4248ce8'
+  label: 'Latest job opportunities'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/21
+    negate: false
+    context_mapping: {  }

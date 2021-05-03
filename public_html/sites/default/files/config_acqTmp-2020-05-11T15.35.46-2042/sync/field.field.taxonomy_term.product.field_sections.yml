@@ -1,0 +1,38 @@
+uuid: d3b4d60f-a5c1-493a-acd3-c7ce1158cc50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sections
+    - taxonomy.vocabulary.product
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.product.field_sections
+field_name: field_sections
+entity_type: taxonomy_term
+bundle: product
+label: sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      free_form:
+        weight: 5
+        enabled: false
+      impact:
+        weight: 6
+        enabled: false
+      pullout_content:
+        weight: 7
+        enabled: false
+      three_column:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,38 @@
+uuid: 7e2452e0-a390-4b1c-9a2d-53164bfc6d72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_column.field_centre_content
+    - field.field.paragraph.three_column.field_left_content
+    - field.field.paragraph.three_column.field_right_content
+    - paragraphs.paragraphs_type.three_column
+  module:
+    - text
+id: paragraph.three_column.default
+targetEntityType: paragraph
+bundle: three_column
+mode: default
+content:
+  field_centre_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_left_content:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_right_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: d5a03fe8-f5e0-4472-89c1-b8fde5dc5962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner
+    - node.type.case_study
+    - taxonomy.vocabulary.partners
+id: node.case_study.field_partner
+field_name: field_partner
+entity_type: node
+bundle: case_study
+label: Partners
+description: 'Link this project to a partner, this provides extra context to allow for displaying relevant content to visitors and additional filtering options.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partners: partners
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

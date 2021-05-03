@@ -1,0 +1,10 @@
+uuid: ee28173d-0784-4a85-88d4-47f3a1faeea4
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.term_with_icon
+label: 'Term with icon'
+targetEntityType: taxonomy_term
+cache: true

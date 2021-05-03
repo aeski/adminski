@@ -1,0 +1,162 @@
+uuid: 52b04d98-67e3-4d10-af02-ee5861fef555
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.case_study.body
+    - field.field.node.case_study.field_address
+    - field.field.node.case_study.field_approach
+    - field.field.node.case_study.field_body_old
+    - field.field.node.case_study.field_breakout
+    - field.field.node.case_study.field_challenge
+    - field.field.node.case_study.field_deliverables
+    - field.field.node.case_study.field_feature_audio
+    - field.field.node.case_study.field_feature_image
+    - field.field.node.case_study.field_impact
+    - field.field.node.case_study.field_intro
+    - field.field.node.case_study.field_partner
+    - field.field.node.case_study.field_pullout
+    - field.field.node.case_study.field_solution
+    - field.field.node.case_study.field_subtitle
+    - field.field.node.case_study.field_summary
+    - field.field.node.case_study.field_tag
+    - node.type.case_study
+  module:
+    - address
+    - entity_reference_revisions
+    - text
+    - user
+id: node.case_study.default
+targetEntityType: node
+bundle: case_study
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    type: address_default
+    weight: 16
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_approach:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_body_old:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_breakout:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_challenge:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_deliverables:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_feature_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: banner_image
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_impact:
+    type: entity_reference_revisions_entity_view
+    weight: 13
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_intro:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_partner:
+    weight: 12
+    label: hidden
+    settings:
+      view_mode: project_view
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_pullout:
+    type: entity_reference_revisions_entity_view
+    weight: 14
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_solution:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_summary:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tag:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_feature_audio: true
+  layout_builder__layout: true

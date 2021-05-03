@@ -1,0 +1,21 @@
+uuid: 8fbd7ffc-1e41-4c00-a492-bbc07c9fb4c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_left_content
+    - paragraphs.paragraphs_type.three_column
+  module:
+    - text
+id: paragraph.three_column.field_left_content
+field_name: field_left_content
+entity_type: paragraph
+bundle: three_column
+label: 'Left Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

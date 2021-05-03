@@ -1,0 +1,32 @@
+uuid: cf41ef99-a2a7-4b34-8b57-60b985485308
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_body
+    - taxonomy.vocabulary.product
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    basic_text_long: '0'
+    basic_text_short: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: taxonomy_term.product.field_body
+field_name: field_body
+entity_type: taxonomy_term
+bundle: product
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

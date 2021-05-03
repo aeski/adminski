@@ -1,0 +1,12 @@
+uuid: 4109b10a-d00f-4540-9e98-35ad7b130f50
+langcode: en
+status: true
+dependencies: {  }
+id: staff
+label: Staff
+weight: -8
+is_admin: null
+permissions:
+  - 'use text format basic_text_long'
+  - 'use text format basic_text_short'
+  - 'view any unpublished content'
